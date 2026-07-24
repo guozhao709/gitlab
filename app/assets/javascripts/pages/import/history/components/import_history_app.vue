@@ -163,7 +163,7 @@ export default {
             <span v-else>{{ item.import_url }}</span>
           </template>
           <span v-else>{{
-            s__('BulkImport|Template / File-based import / GitLab Migration')
+            s__('BulkImport|Template / File-based import / GitRepo Migration')
           }}</span>
         </template>
         <template #cell(destination)="{ item }">

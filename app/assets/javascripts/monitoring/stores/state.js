@@ -79,7 +79,7 @@ export default () => ({
   environmentsLoading: false,
   currentEnvironmentName: null,
 
-  // GitLab paths to other pages
+  // GitRepo paths to other pages
   externalDashboardUrl: '',
   projectPath: null,
   operationsSettingsPath: '',

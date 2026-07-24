@@ -74,7 +74,7 @@ export const setPageTitle = (title) => {
 };
 
 export const setPageTitleForFile = (state, file) => {
-  const title = [file.path, state.currentBranchId, state.currentProjectId, 'GitLab'].join(' · ');
+  const title = [file.path, state.currentBranchId, state.currentProjectId, 'GitRepo'].join(' · ');
   setPageTitle(title);
 };
 

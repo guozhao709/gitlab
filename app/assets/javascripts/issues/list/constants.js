@@ -24,7 +24,7 @@ export const i18n = {
     'Issues are being rebalanced at the moment, so manual reordering is disabled.',
   ),
   jiraIntegrationMessage: s__(
-    'JiraService|%{jiraDocsLinkStart}Enable the Jira integration%{jiraDocsLinkEnd} to view your Jira issues in GitLab.',
+    'JiraService|%{jiraDocsLinkStart}Enable the Jira integration%{jiraDocsLinkEnd} to view your Jira issues in GitRepo.',
   ),
   jiraIntegrationSecondaryMessage: s__('JiraService|This feature requires a Premium plan.'),
   jiraIntegrationTitle: s__('JiraService|Using Jira for issue tracking?'),

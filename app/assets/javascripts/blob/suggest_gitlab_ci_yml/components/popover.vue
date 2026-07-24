@@ -10,7 +10,7 @@ const popoverStates = {
   suggest_gitlab_ci_yml: {
     title: s__(`suggestPipeline|1/2: Choose a template`),
     content: s__(
-      `suggestPipeline|We’re adding a GitLab CI configuration file to add a pipeline to the project. You could create it manually, but we recommend that you start with a GitLab template that works out of the box.`,
+      `suggestPipeline|We’re adding a GitRepo CI configuration file to add a pipeline to the project. You could create it manually, but we recommend that you start with a GitRepo template that works out of the box.`,
     ),
     footer: s__(
       `suggestPipeline|Choose %{boldStart}Code Quality%{boldEnd} to add a pipeline that tests the quality of your code.`,

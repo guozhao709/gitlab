@@ -239,7 +239,7 @@ export default {
       // This approach of element detection is needed
       // as the dropdown wrapper is not using `GlDropdown` as
       // it will also require us to use `BDropdownForm`
-      // which is yet to be implemented in GitLab UI.
+      // which is yet to be implemented in GitRepo UI.
       const hasExceptionClass = [
         'js-dropdown-button',
         'js-btn-cancel-create',

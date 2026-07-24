@@ -6,7 +6,7 @@
       = f.label :container_registry_token_expire_delay, _('Authorization token duration (minutes)'), class: 'label-bold'
       = f.number_field :container_registry_token_expire_delay, class: 'form-control gl-form-input'
     .form-group
-      - label = _("Enable container expiration and retention policies for projects created earlier than GitLab 12.7.")
+      - label = _("Enable container expiration and retention policies for projects created earlier than GitRepo 12.7.")
       - label_link = link_to sprite_icon('question-o'), help_page_path('user/packages/container_registry/reduce_container_registry_storage', anchor: 'cleanup-policy')
       - help_text = _("Existing projects will be able to use expiration policies. Avoid enabling this if an external Container Registry is being used, as there is a performance risk if many images exist on one project.")
       - help_link = link_to sprite_icon('question-o'), help_page_path('user/packages/container_registry/reduce_container_registry_storage', anchor: 'use-with-external-container-registries')

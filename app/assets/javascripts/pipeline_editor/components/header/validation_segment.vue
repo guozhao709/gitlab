@@ -15,11 +15,11 @@ export const i18n = {
     "We'll continuously validate your pipeline configuration. The validation results will appear here.",
   ),
   learnMore: __('Learn more'),
-  loading: s__('Pipelines|Validating GitLab CI configuration…'),
-  invalid: s__('Pipelines|This GitLab CI configuration is invalid.'),
-  invalidWithReason: s__('Pipelines|This GitLab CI configuration is invalid: %{reason}.'),
+  loading: s__('Pipelines|Validating GitRepo CI configuration…'),
+  invalid: s__('Pipelines|This GitRepo CI configuration is invalid.'),
+  invalidWithReason: s__('Pipelines|This GitRepo CI configuration is invalid: %{reason}.'),
   unavailableValidation: s__('Pipelines|Configuration validation currently not available.'),
-  valid: s__('Pipelines|This GitLab CI configuration is valid.'),
+  valid: s__('Pipelines|This GitRepo CI configuration is valid.'),
 };
 
 export default {

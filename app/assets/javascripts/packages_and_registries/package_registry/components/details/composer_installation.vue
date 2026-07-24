@@ -44,7 +44,7 @@ export default {
     packageInclude: s__('PackageRegistry|Install package version'),
     copyPackageInclude: s__('PackageRegistry|Copy require package include'),
     infoLine: s__(
-      'PackageRegistry|For more information on Composer packages in GitLab, %{linkStart}see the documentation.%{linkEnd}',
+      'PackageRegistry|For more information on Composer packages in GitRepo, %{linkStart}see the documentation.%{linkEnd}',
     ),
   },
   tracking: {

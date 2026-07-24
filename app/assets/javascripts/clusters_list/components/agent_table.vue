@@ -142,7 +142,7 @@ export default {
 
       const majorVersionMismatch = agentMajorVersion !== serverMajorVersion;
 
-      // We should warn user if their current GitLab and agent versions are more than 1 minor version apart:
+      // We should warn user if their current GitRepo and agent versions are more than 1 minor version apart:
       const minorVersionMismatch = Math.abs(agentMinorVersion - serverMinorVersion) > 1;
 
       return majorVersionMismatch || minorVersionMismatch;

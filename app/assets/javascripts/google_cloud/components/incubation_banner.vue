@@ -22,7 +22,7 @@ export default {
 
 <template>
   <gl-alert :dismissible="false" variant="info">
-    {{ __('This is an experimental feature developed by GitLab Incubation Engineering.') }}
+    {{ __('This is an experimental feature developed by GitRepo Incubation Engineering.') }}
     <gl-sprintf
       :message="
         __(

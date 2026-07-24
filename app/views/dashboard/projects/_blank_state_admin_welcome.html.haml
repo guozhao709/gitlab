@@ -11,7 +11,7 @@
       %h3.gl-font-size-h2.gl-mt-0
         = _('Create a project')
       %p
-        = _('Projects are where you store your code, access issues, wiki and other features of GitLab.')
+        = _('Projects are where you store your code, access issues, wiki and other features of GitRepo.')
 
   - if current_user.can_create_group?
     = link_to new_group_path, class: link_classes do
@@ -30,13 +30,13 @@
         %h3.gl-font-size-h2.gl-mt-0
           = _('Add people')
         %p
-          = _('Add your team members and others to GitLab.')
+          = _('Add your team members and others to GitRepo.')
 
   = link_to admin_root_path, class: link_classes do
     .blank-state-icon
       = custom_icon("configure_server", size: 50)
     .blank-state-body.gl-sm-pl-0.gl-pl-6
       %h3.gl-font-size-h2.gl-mt-0
-        = _('Configure GitLab')
+        = _('Configure GitRepo')
       %p
-        = _('Make adjustments to how your GitLab instance is set up.')
+        = _('Make adjustments to how your GitRepo instance is set up.')

@@ -10,7 +10,7 @@ import { INTERACTIVE_RESOLVE_MODE } from './constants';
 
 /**
  * A lot of the classes below should
- * be replaced with GitLab UI components.
+ * be replaced with GitRepo UI components.
  *
  * We are just doing it temporarily in order to migrate the template from HAML => Vue in an iterative manner
  * and are going to clean it up as part of:

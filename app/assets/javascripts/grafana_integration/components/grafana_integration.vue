@@ -79,7 +79,7 @@ export default {
       <p class="js-section-sub-header">
         {{
           s__(
-            'GrafanaIntegration|Set up Grafana authentication to embed Grafana panels in GitLab Flavored Markdown.',
+            'GrafanaIntegration|Set up Grafana authentication to embed Grafana panels in GitRepo Flavored Markdown.',
           )
         }}
         <gl-link :href="helpUrl">{{ __('Learn more.') }}</gl-link>

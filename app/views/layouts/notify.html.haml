@@ -2,7 +2,7 @@
   %head
     %meta{ content: "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
     %title
-      GitLab
+      GitRepo
     - if Feature.enabled?(:enhanced_notify_css)
       = stylesheet_link_tag 'notify_enhanced'
     - else
@@ -18,9 +18,9 @@
         %br
         - if @target_url
           - if @reply_by_email
-            = _('Reply to this email directly or %{view_it_on_gitlab}.').html_safe % { view_it_on_gitlab: link_to(_("view it on GitLab"), @target_url) }
+            = _('Reply to this email directly or %{view_it_on_gitlab}.').html_safe % { view_it_on_gitlab: link_to(_("view it on GitRepo"), @target_url) }
           - else
-            #{link_to _("View it on GitLab"), @target_url}.
+            #{link_to _("View it on GitRepo"), @target_url}.
           %br
           -# Don't link the host in the line below, one link in the email is easier to quickly click than two.
           = notification_reason_text(@reason)

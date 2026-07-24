@@ -25,7 +25,7 @@ export default {
       },
       step4: {
         label: __('Step 4.'),
-        help: __('Push the target branch up to GitLab.'),
+        help: __('Push the target branch up to GitRepo.'),
       },
     },
     copyCommands: __('Copy commands'),
@@ -100,7 +100,7 @@ export default {
     mergeInfo3() {
       return this.canMerge
         ? `git push origin ${this.escapedTargetBranch}`
-        : __('Note that pushing to GitLab requires write access to this repository.');
+        : __('Note that pushing to GitRepo requires write access to this repository.');
     },
     escapedForkBranch() {
       return escapeShellString(`${this.sourceProjectPath}-${this.sourceBranch}`);

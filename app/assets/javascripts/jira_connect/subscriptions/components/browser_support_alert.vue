@@ -13,7 +13,7 @@ export default {
   i18n: {
     title: s__('Integrations|Your browser is not supported'),
     body: s__(
-      'Integrations|You must use a %{linkStart}supported browser%{linkEnd} to use the GitLab for Jira app.',
+      'Integrations|You must use a %{linkStart}supported browser%{linkEnd} to use the GitRepo for Jira app.',
     ),
   },
   DOCS_LINK_URL: helpPagePath('install/requirements', { anchor: 'supported-web-browsers' }),

@@ -1,5 +1,5 @@
 - page_description brand_title unless page_description
-- site_name = "GitLab"
+- site_name = "GitRepo"
 %head{ prefix: "og: http://ogp.me/ns#" }
   %meta{ charset: "utf-8" }
 
@@ -79,12 +79,12 @@
   = favicon_link_tag 'apple-touch-icon.png', rel: 'apple-touch-icon'
 
   -# OpenSearch
-  %link{ href: search_opensearch_path(format: :xml), rel: 'search', title: 'Search GitLab', type: 'application/opensearchdescription+xml' }
+  %link{ href: search_opensearch_path(format: :xml), rel: 'search', title: 'Search GitRepo', type: 'application/opensearchdescription+xml' }
 
   = yield :meta_tags
 
   = render 'layouts/google_analytics' if extra_config.has_key?('google_analytics_id')
   = render 'layouts/matomo' if extra_config.has_key?('matomo_url') && extra_config.has_key?('matomo_site_id')
   = render 'layouts/snowplow'
-  -# This is needed by [GitLab JH](https://gitlab.com/gitlab-jh/gitlab/-/issues/184)
+  -# This is needed by [GitRepo JH](https://gitlab.com/gitlab-jh/gitlab/-/issues/184)
   = render_if_exists "layouts/frontend_monitor"

@@ -30,14 +30,14 @@ export default {
     notFound: __('Not found'),
     noServiceAccountsTitle: __('No service accounts'),
     noServiceAccountsDescription: __(
-      'Service Accounts keys authorize GitLab to deploy your Google Cloud project',
+      'Service Accounts keys authorize GitRepo to deploy your Google Cloud project',
     ),
     serviceAccountsTitle: __('Service accounts'),
     serviceAccountsDescription: __(
-      'Service Accounts keys authorize GitLab to deploy your Google Cloud project',
+      'Service Accounts keys authorize GitRepo to deploy your Google Cloud project',
     ),
     secretManagersDescription: __(
-      'Enhance security by storing service account keys in secret managers - learn more about %{docLinkStart}secret management with GitLab%{docLinkEnd}',
+      'Enhance security by storing service account keys in secret managers - learn more about %{docLinkStart}secret management with GitRepo%{docLinkEnd}',
     ),
   },
 };

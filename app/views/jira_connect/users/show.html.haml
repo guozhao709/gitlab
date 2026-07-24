@@ -1,6 +1,6 @@
 .gl-text-center.gl-mx-auto.gl-pt-6
   %h3.gl-mb-4
-    = _('You are signed in to GitLab as:')
+    = _('You are signed in to GitRepo as:')
 
   .gl-display-flex.gl-flex-direction-column.gl-align-items-center.gl-mb-4
     = link_to user_path(current_user), target: '_blank', rel: 'noopener noreferrer' do
@@ -8,10 +8,10 @@
     = link_to current_user.to_reference, user_path(current_user), target: '_blank', rel: 'noopener noreferrer'
 
   %p.gl-mb-6
-    = s_('JiraService|You can now close this window and%{br}return to the GitLab for Jira application.').html_safe % { br: '<br>'.html_safe }
+    = s_('JiraService|You can now close this window and%{br}return to the GitRepo for Jira application.').html_safe % { br: '<br>'.html_safe }
 
   - if @jira_app_link
-    %p= link_to s_('Integrations|Return to GitLab for Jira'), @jira_app_link, class: 'gl-button btn btn-confirm'
+    %p= link_to s_('Integrations|Return to GitRepo for Jira'), @jira_app_link, class: 'gl-button btn btn-confirm'
 
   %p= link_to _('Sign out'), destroy_user_session_path, method: :post
 

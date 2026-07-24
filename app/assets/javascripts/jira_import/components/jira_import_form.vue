@@ -291,7 +291,7 @@ export default {
         />
       </gl-form-group>
 
-      <h4 class="gl-mb-4">{{ __('Jira-GitLab user mapping template') }}</h4>
+      <h4 class="gl-mb-4">{{ __('Jira-GitRepo user mapping template') }}</h4>
 
       <p>{{ $options.userMappingMessage }}</p>
 

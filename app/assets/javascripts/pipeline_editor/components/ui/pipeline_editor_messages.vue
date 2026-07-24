@@ -24,7 +24,7 @@ export default {
   },
 
   errors: {
-    [COMMIT_FAILURE]: s__('Pipelines|The GitLab CI configuration could not be updated.'),
+    [COMMIT_FAILURE]: s__('Pipelines|The GitRepo CI configuration could not be updated.'),
     [DEFAULT_FAILURE]: __('Something went wrong on our end.'),
     [LOAD_FAILURE_UNKNOWN]: s__('Pipelines|The CI configuration was not loaded, please try again.'),
     [PIPELINE_FAILURE]: s__('Pipelines|There was a problem with loading the pipeline data.'),

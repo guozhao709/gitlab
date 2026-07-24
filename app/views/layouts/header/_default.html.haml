@@ -7,12 +7,13 @@
     .header-content.js-header-content
       .title-container.hide-when-top-nav-responsive-open.gl-transition-medium.gl-display-flex.gl-align-items-stretch.gl-pt-0
         %h1.title
-          %span.gl-sr-only GitLab
-          = link_to root_path, title: _('Dashboard'), id: 'logo', **tracking_attrs('main_navigation', 'click_gitlab_logo_link', 'navigation') do
-            %span{ :class => "gl-display-none gl-lg-display-flex" }
-              = brand_header_logo({add_gitlab_white_text: true})
-            %span{ :class => "gl-lg-display-none! gl-display-flex" }
-              = brand_header_logo
+          = link_to '无人机仿真开发分布式管理平台', root_path, title: _('Dashboard'), id: 'logo', **tracking_attrs('main_navigation', 'click_gitlab_logo_link', 'navigation')
+          -# 原 SVG logo 图标注释掉，改为纯文字
+          -# = link_to root_path, title: _('Dashboard'), id: 'logo', **tracking_attrs('main_navigation', 'click_gitlab_logo_link', 'navigation') do
+          -#   %span{ :class => "gl-display-none gl-lg-display-flex" }
+          -#     = brand_header_logo({add_gitlab_white_text: true})
+          -#   %span{ :class => "gl-lg-display-none! gl-display-flex" }
+          -#     = brand_header_logo
           - if Gitlab.com_and_canary?
             = link_to Gitlab::Saas.canary_toggle_com_url, class: 'canary-badge bg-transparent', data: { qa_selector: 'canary_badge_link' }, target: :_blank, rel: 'noopener noreferrer' do
               = gl_badge_tag({ variant: :success, size: :sm }) do
@@ -46,18 +47,18 @@
             %li.nav-item{ class: 'd-none d-sm-inline-block d-lg-none' }
               = link_to search_menu_item.fetch(:href), title: search_menu_item.fetch(:title), aria: { label: search_menu_item.fetch(:title) }, data: {toggle: 'tooltip', placement: 'bottom', container: 'body'} do
                 = sprite_icon(search_menu_item.fetch(:icon))
-          - if header_link?(:issues)
-            = nav_link(path: 'dashboard#issues', html_options: { class: "user-counter" }) do
-              = link_to assigned_issues_dashboard_path, title: _('Issues'), class: 'dashboard-shortcuts-issues js-prefetch-document', aria: { label: _('Issues') },
-                data: { qa_selector: 'issues_shortcut_button', toggle: 'tooltip', placement: 'bottom',
-                track_label: 'main_navigation',
-                track_action: 'click_issues_link',
-                track_property: 'navigation',
-                container: 'body' } do
-                = sprite_icon('issues')
-                - issues_count = assigned_issuables_count(:issues)
-                = gl_badge_tag({ size: :sm, variant: :success }, { class: "gl-ml-n2 #{(' gl-display-none' if issues_count == 0)}", "aria-label": n_("%d assigned issue", "%d assigned issues", issues_count) % issues_count }) do
-                  = number_with_delimiter(issues_count)
+          -# - if header_link?(:issues)
+          -#   = nav_link(path: 'dashboard#issues', html_options: { class: "user-counter" }) do
+          -#     = link_to assigned_issues_dashboard_path, title: _('Issues'), class: 'dashboard-shortcuts-issues js-prefetch-document', aria: { label: _('Issues') },
+          -#       data: { qa_selector: 'issues_shortcut_button', toggle: 'tooltip', placement: 'bottom',
+          -#       track_label: 'main_navigation',
+          -#       track_action: 'click_issues_link',
+          -#       track_property: 'navigation',
+          -#       container: 'body' } do
+          -#       = sprite_icon('issues')
+          -#       - issues_count = assigned_issuables_count(:issues)
+          -#       = gl_badge_tag({ size: :sm, variant: :success }, { class: "gl-ml-n2 #{(' gl-display-none' if issues_count == 0)}", "aria-label": n_("%d assigned issue", "%d assigned issues", issues_count) % issues_count }) do
+          -#         = number_with_delimiter(issues_count)
           - if header_link?(:merge_requests)
             = nav_link(path: 'dashboard#merge_requests', html_options: { class: "user-counter dropdown" }) do
               - top_level_link = current_user.mr_attention_requests_enabled? ? attention_requested_mrs_dashboard_path : assigned_mrs_dashboard_path
@@ -100,28 +101,28 @@
                         = _('Review requests for you')
                       = gl_badge_tag({ variant: :neutral, size: :sm }, { class: "js-reviewer-mr-count gl-ml-auto" }) do
                         = user_merge_requests_counts[:review_requested]
-          - if header_link?(:todos)
-            = nav_link(controller: 'dashboard/todos', html_options: { class: "user-counter" }) do
-              = link_to dashboard_todos_path, title: _('To-Do List'), aria: { label: _('To-Do List') }, class: 'shortcuts-todos js-prefetch-document',
-                data: { qa_selector: 'todos_shortcut_button', toggle: 'tooltip', placement: 'bottom',
-                track_label: 'main_navigation',
-                track_action: 'click_to_do_link',
-                track_property: 'navigation',
-                container: 'body' } do
-                = sprite_icon('todo-done')
-                -# The todos' counter badge's visibility is being toggled by adding or removing the .hidden class in Js.
-                -# We'll eventually migrate to .gl-display-none: https://gitlab.com/gitlab-org/gitlab/-/issues/351792.
-                = gl_badge_tag({ size: :sm, variant: :info }, { class: "js-todos-count gl-ml-n2#{(' hidden' if todos_pending_count == 0)}", "aria-label": _("Todos count") }) do
-                  = todos_count_format(todos_pending_count)
-          %li.nav-item.header-help.dropdown.d-none.d-md-block{ data: { track_action: 'click_question_mark_link', track_label: 'main_navigation', track_property: 'navigation', track_experiment: 'cross_stage_fdm' } }
-            = link_to help_path, class: 'header-help-dropdown-toggle gl-relative', data: { toggle: "dropdown" } do
-              %span.gl-sr-only
-                = s_('Nav|Help')
-              = sprite_icon('question-o')
-              %span.notification-dot.rounded-circle.gl-absolute
-              = sprite_icon('chevron-down', css_class: 'caret-down')
-            .dropdown-menu.dropdown-menu-right
-              = render 'layouts/header/help_dropdown'
+          -# - if header_link?(:todos)
+          -#   = nav_link(controller: 'dashboard/todos', html_options: { class: "user-counter" }) do
+          -#     = link_to dashboard_todos_path, title: _('To-Do List'), aria: { label: _('To-Do List') }, class: 'shortcuts-todos js-prefetch-document',
+          -#       data: { qa_selector: 'todos_shortcut_button', toggle: 'tooltip', placement: 'bottom',
+          -#       track_label: 'main_navigation',
+          -#       track_action: 'click_to_do_link',
+          -#       track_property: 'navigation',
+          -#       container: 'body' } do
+          -#       = sprite_icon('todo-done')
+          -#       -# The todos' counter badge's visibility is being toggled by adding or removing the .hidden class in Js.
+          -#       -# We'll eventually migrate to .gl-display-none: https://gitlab.com/gitlab-org/gitlab/-/issues/351792.
+          -#       = gl_badge_tag({ size: :sm, variant: :info }, { class: "js-todos-count gl-ml-n2#{(' hidden' if todos_pending_count == 0)}", "aria-label": _("Todos count") }) do
+          -#         = todos_count_format(todos_pending_count)
+          -# %li.nav-item.header-help.dropdown.d-none.d-md-block{ data: { track_action: 'click_question_mark_link', track_label: 'main_navigation', track_property: 'navigation', track_experiment: 'cross_stage_fdm' } }
+          -#   = link_to help_path, class: 'header-help-dropdown-toggle gl-relative', data: { toggle: "dropdown" } do
+          -#     %span.gl-sr-only
+          -#       = s_('Nav|Help')
+          -#     = sprite_icon('question-o')
+          -#     %span.notification-dot.rounded-circle.gl-absolute
+          -#     = sprite_icon('chevron-down', css_class: 'caret-down')
+          -#   .dropdown-menu.dropdown-menu-right
+          -#     = render 'layouts/header/help_dropdown'
           - unless current_user
             - experiment(:logged_out_marketing_header, actor: nil) do |e|
               - e.candidate do

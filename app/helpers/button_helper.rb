@@ -5,7 +5,7 @@ module ButtonHelper
   #
   # data  - Data attributes passed to `content_tag` (default: {}):
   #         :text   - Text to copy (optional)
-  #         :gfm    - GitLab Flavored Markdown to copy, if different from `text` (optional)
+  #         :gfm    - GitRepo Flavored Markdown to copy, if different from `text` (optional)
   #         :target - Selector for target element to copy from (optional)
   #
   # Examples:

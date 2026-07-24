@@ -10,7 +10,7 @@ export const i18n = {
     selectType: {
       label: s__('AlertSettings|Select integration type'),
       enterprise: s__(
-        'AlertSettings|Free versions of GitLab are limited to one integration per type. To add more, %{linkStart}upgrade your subscription%{linkEnd}.',
+        'AlertSettings|Free versions of GitRepo are limited to one integration per type. To add more, %{linkStart}upgrade your subscription%{linkEnd}.',
       ),
     },
     nameIntegration: {
@@ -27,10 +27,10 @@ export const i18n = {
     },
     setupCredentials: {
       help: s__(
-        'AlertSettings|Use the URL and authorization key below to configure how an external service sends alerts to GitLab. %{linkStart}How do I configure the endpoint?%{linkEnd}',
+        'AlertSettings|Use the URL and authorization key below to configure how an external service sends alerts to GitRepo. %{linkStart}How do I configure the endpoint?%{linkEnd}',
       ),
       prometheusHelp: s__(
-        'AlertSettings|Use the URL and authorization key below to configure how Prometheus sends alerts to GitLab. Review the %{linkStart}GitLab documentation%{linkEnd} to learn how to configure your endpoint.',
+        'AlertSettings|Use the URL and authorization key below to configure how Prometheus sends alerts to GitRepo. Review the %{linkStart}GitRepo documentation%{linkEnd} to learn how to configure your endpoint.',
       ),
       webhookUrl: s__('AlertSettings|Webhook URL'),
       authorizationKey: s__('AlertSettings|Authorization key'),
@@ -51,12 +51,12 @@ export const i18n = {
       resetBody: s__('AlertSettings|If you edit the payload, you must re-map the fields again.'),
       resetOk: s__('AlertSettings|Proceed with editing'),
       mapIntro: s__(
-        'AlertSettings|You can map default GitLab alert fields to your payload keys in the dropdowns below.',
+        'AlertSettings|You can map default GitRepo alert fields to your payload keys in the dropdowns below.',
       ),
     },
     testPayload: {
       help: s__(
-        'AlertSettings|Enter an example payload from your selected monitoring tool. This supports sending alerts to a GitLab endpoint.',
+        'AlertSettings|Enter an example payload from your selected monitoring tool. This supports sending alerts to a GitRepo endpoint.',
       ),
       placeholder: s__('AlertSettings|{ "events": [{ "application": "Name of application" }] }'),
       modalTitle: s__('AlertSettings|The form has unsaved changes'),
@@ -85,7 +85,7 @@ export const i18n = {
   integrationCreated: {
     title: s__('AlertSettings|Integration successfully saved'),
     successMsg: s__(
-      'AlertSettings|GitLab has created a URL and authorization key for your integration. You can use them to set up a webhook and authorize your endpoint to send alerts to GitLab.',
+      'AlertSettings|GitRepo has created a URL and authorization key for your integration. You can use them to set up a webhook and authorize your endpoint to send alerts to GitRepo.',
     ),
     btnCaption: s__('AlertSettings|View URL and authorization key'),
   },

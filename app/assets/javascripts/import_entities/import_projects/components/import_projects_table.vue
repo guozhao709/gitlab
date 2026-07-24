@@ -157,7 +157,7 @@ export default {
             {{ fromHeaderText }}
           </th>
           <th class="import-jobs-to-col gl-p-4 gl-vertical-align-top gl-border-b-1">
-            {{ __('To GitLab') }}
+            {{ __('To GitRepo') }}
           </th>
           <th class="import-jobs-status-col gl-p-4 gl-vertical-align-top gl-border-b-1">
             {{ __('Status') }}

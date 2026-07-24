@@ -32,10 +32,10 @@ const extractAttachmentLinkUrl = (html) => {
  * in the uploadsPath parameter. The expected response of the
  * uploads service is a JSON object that contains, at least, a
  * link property. The link property should contain markdown link
- * definition (i.e. [GitLab](https://gitlab.com)).
+ * definition (i.e. [GitRepo](https://gitlab.com)).
  *
  * This Markdown will be rendered to extract its canonical and full
- * URLs using GitLab Flavored Markdown renderer in the backend.
+ * URLs using GitRepo Flavored Markdown renderer in the backend.
  *
  * @param {Object} params
  * @param {String} params.uploadsPath An absolute URL that points to a service

@@ -19,8 +19,8 @@ export const apolloCaptchaLink = new ApolloLink((operation, forward) =>
             // captcha response headers.
             operation.setContext({
               headers: {
-                'X-GitLab-Captcha-Response': captchaResponse,
-                'X-GitLab-Spam-Log-Id': spamLogId,
+                'X-GitRepo-Captcha-Response': captchaResponse,
+                'X-GitRepo-Spam-Log-Id': spamLogId,
               },
             });
             forward(operation).subscribe(observer);

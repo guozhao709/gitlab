@@ -149,7 +149,7 @@ export default {
     emptyPageTitle: s__('PackageRegistry|There are no packages yet'),
     noResultsTitle: s__('PackageRegistry|Sorry, your filter produced no results'),
     noResultsText: s__(
-      'PackageRegistry|Learn how to %{noPackagesLinkStart}publish and share your packages%{noPackagesLinkEnd} with GitLab.',
+      'PackageRegistry|Learn how to %{noPackagesLinkStart}publish and share your packages%{noPackagesLinkEnd} with GitRepo.',
     ),
   },
   links: {

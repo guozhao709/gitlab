@@ -36,7 +36,7 @@ const PANELS = [
     selector: '#import-project-pane',
     title: s__('ProjectsNew|Import project'),
     description: s__(
-      'ProjectsNew|Migrate your data from an external source like GitHub, Bitbucket, or another instance of GitLab.',
+      'ProjectsNew|Migrate your data from an external source like GitHub, Bitbucket, or another instance of GitRepo.',
     ),
     illustration: importProjectIllustration,
   },
@@ -45,7 +45,7 @@ const PANELS = [
     name: CI_CD_PANEL,
     selector: '#ci-cd-project-pane',
     title: s__('ProjectsNew|Run CI/CD for external repository'),
-    description: s__('ProjectsNew|Connect your external repository to GitLab CI/CD.'),
+    description: s__('ProjectsNew|Connect your external repository to GitRepo CI/CD.'),
     illustration: ciCdProjectIllustration,
   },
 ];

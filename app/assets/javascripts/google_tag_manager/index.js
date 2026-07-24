@@ -30,7 +30,7 @@ const generateProductInfo = (sku, quantity) => {
 
   const productInfo = {
     ...product,
-    brand: 'GitLab',
+    brand: 'GitRepo',
     category: 'DevOps',
     quantity,
   };
@@ -219,7 +219,7 @@ export const trackTransaction = (transactionDetails) => {
       purchase: {
         actionField: {
           id: transactionId,
-          affiliation: 'GitLab',
+          affiliation: 'GitRepo',
           option: paymentOption,
           revenue: revenue.toString(),
           tax: tax.toString(),
@@ -247,7 +247,7 @@ export const pushEECproductAddToCartEvent = () => {
             name: 'CI/CD Minutes',
             id: '0003',
             price: '10',
-            brand: 'GitLab',
+            brand: 'GitRepo',
             category: 'DevOps',
             variant: 'add-on',
             quantity: 1,

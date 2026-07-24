@@ -9,7 +9,7 @@ import { loadCSSFile } from '../lib/utils/css_utils';
   // Matches everything but the file name
   const FILENAMEREGEX = /^.*[\\\/]/;
 
-  class GitLabCrop {
+  class GitRepoCrop {
     constructor(
       input,
       {
@@ -188,7 +188,7 @@ import { loadCSSFile } from '../lib/utils/css_utils';
 
   $.fn.glCrop = function (opts) {
     return this.each(function () {
-      return $(this).data('glcrop', new GitLabCrop(this, opts));
+      return $(this).data('glcrop', new GitRepoCrop(this, opts));
     });
   };
 })(window.gl || (window.gl = {}));

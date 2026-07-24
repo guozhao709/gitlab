@@ -54,8 +54,8 @@ export default {
       return this.glFeatures.jiraConnectOauth;
     },
     /**
-     * Returns false if the GitLab for Jira app doesn't support the user's browser.
-     * Any web API that the GitLab for Jira app depends on should be checked here.
+     * Returns false if the GitRepo for Jira app doesn't support the user's browser.
+     * Any web API that the GitRepo for Jira app depends on should be checked here.
      */
     isBrowserSupported() {
       return !this.isOauthEnabled || AccessorUtilities.canUseCrypto();

@@ -26,7 +26,7 @@ export const I18N_INTEGRATION_TABS = {
 
 export const I18N_PAGERDUTY_SETTINGS_FORM = {
   introText: s__(
-    'PagerDutySettings|Create a GitLab incident for each PagerDuty incident by %{linkStart}configuring a webhook in PagerDuty%{linkEnd}',
+    'PagerDutySettings|Create a GitRepo incident for each PagerDuty incident by %{linkStart}configuring a webhook in PagerDuty%{linkEnd}',
   ),
   activeToggle: {
     label: s__('PagerDutySettings|Active'),

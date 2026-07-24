@@ -20,7 +20,7 @@ module BadgesHelper
 
   GL_ICON_CLASSES = %w[gl-icon gl-badge-icon].freeze
 
-  # Creates a GitLab UI badge.
+  # Creates a GitRepo UI badge.
   #
   # Examples:
   #   # Plain text badge

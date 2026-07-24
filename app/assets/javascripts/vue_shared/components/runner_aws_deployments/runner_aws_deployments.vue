@@ -13,7 +13,7 @@ export default {
   },
   modalId: 'runner-aws-deployments-modal',
   i18n: {
-    buttonText: s__('Runners|Deploy GitLab Runner in AWS'),
+    buttonText: s__('Runners|Deploy GitRepo Runner in AWS'),
   },
   data() {
     return {

@@ -9,13 +9,13 @@ import LearnGitlabSectionCard from './learn_gitlab_section_card.vue';
 export default {
   components: { GlProgressBar, GlSprintf, GlAlert, LearnGitlabSectionCard },
   i18n: {
-    title: s__('LearnGitLab|Learn GitLab'),
+    title: s__('LearnGitRepo|Learn GitRepo'),
     description: s__(
-      'LearnGitLab|Ready to get started with GitLab? Follow these steps to set up your workspace, plan and commit changes, and deploy your project.',
+      'LearnGitRepo|Ready to get started with GitRepo? Follow these steps to set up your workspace, plan and commit changes, and deploy your project.',
     ),
-    percentageCompleted: s__(`LearnGitLab|%{percentage}%{percentSymbol} completed`),
+    percentageCompleted: s__(`LearnGitRepo|%{percentage}%{percentSymbol} completed`),
     successfulInvitations: s__(
-      "LearnGitLab|Your team is growing! You've successfully invited new team members to the %{projectName} project.",
+      "LearnGitRepo|Your team is growing! You've successfully invited new team members to the %{projectName} project.",
     ),
   },
   props: {

@@ -152,7 +152,7 @@ module Nav
       end
 
       {
-        title: _('GitLab'),
+        title: _('GitRepo'),
         menu_items: menu_items
       }
     end

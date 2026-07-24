@@ -18,7 +18,7 @@ export const UNEXPECTED_ERROR_STOPPING = __(
   'An unexpected error occurred while stopping the Web Terminal.',
 );
 export const EMPTY_RUNNERS = __(
-  'Configure GitLab runners to start using the Web Terminal. %{helpStart}Learn more.%{helpEnd}',
+  'Configure GitRepo runners to start using the Web Terminal. %{helpStart}Learn more.%{helpEnd}',
 );
 export const ERROR_CONFIG = __(
   'Configure a %{codeStart}.gitlab-webide.yml%{codeEnd} file in the %{codeStart}.gitlab%{codeEnd} directory to start using the Web Terminal. %{helpStart}Learn more.%{helpEnd}',

@@ -1,7 +1,7 @@
 <script>
 import { GlButtonGroup, GlButton } from '@gitlab/ui';
 
-// TODO: We're planning to move this component to GitLab UI
+// TODO: We're planning to move this component to GitRepo UI
 //       https://gitlab.com/gitlab-org/gitlab-ui/-/issues/1787
 export default {
   components: {

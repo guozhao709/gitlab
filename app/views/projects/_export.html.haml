@@ -5,7 +5,7 @@
 .sub-section{ data: { qa_selector: 'export_project_content' } }
   %h4= _('Export project')
   - link_start = '<a href="%{url}" target="_blank" rel="noopener noreferrer">'.html_safe % { url: help_page_path('user/project/settings/import_export') }
-  %p= _('Export this project with all its related data in order to move it to a new GitLab instance. When the exported file is ready, you can download it from this page or from the download link in the email notification you will receive. You can then import it when creating a new project. %{link_start}Learn more.%{link_end}').html_safe % { link_start: link_start, link_end: '</a>'.html_safe }
+  %p= _('Export this project with all its related data in order to move it to a new GitRepo instance. When the exported file is ready, you can download it from this page or from the download link in the email notification you will receive. You can then import it when creating a new project. %{link_start}Learn more.%{link_end}').html_safe % { link_start: link_start, link_end: '</a>'.html_safe }
   %p.gl-mb-0
     %p= _('The following items will be exported:')
     %ul

@@ -11,9 +11,9 @@
 = content_for :preview_text do
   %div{ style: "display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;" }
     - if member.created_by
-      = s_('InviteEmail|Join your team on GitLab! %{inviter} invited you to %{project_or_group_name}') % { inviter: inviter_name, project_or_group_name: placeholders[:project_or_group_name] }
+      = s_('InviteEmail|Join your team on GitRepo! %{inviter} invited you to %{project_or_group_name}') % { inviter: inviter_name, project_or_group_name: placeholders[:project_or_group_name] }
     - else
-      = s_('InviteEmail|Join your team on GitLab! You are invited to %{project_or_group_name}') % { project_or_group_name: placeholders[:project_or_group_name] }
+      = s_('InviteEmail|Join your team on GitRepo! You are invited to %{project_or_group_name}') % { project_or_group_name: placeholders[:project_or_group_name] }
   = gmail_goto_action(join_text, join_url)
 
 %tr

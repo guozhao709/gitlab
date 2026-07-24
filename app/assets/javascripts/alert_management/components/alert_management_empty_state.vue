@@ -6,9 +6,9 @@ import alertsHelpUrlQuery from '../graphql/queries/alert_help_url.query.graphql'
 export default {
   i18n: {
     emptyState: {
-      title: s__('AlertManagement|Surface alerts in GitLab'),
+      title: s__('AlertManagement|Surface alerts in GitRepo'),
       info: s__(
-        'AlertManagement|Display alerts from all your monitoring tools directly within GitLab. Streamline the investigation of your alerts and the escalation of alerts to incidents.',
+        'AlertManagement|Display alerts from all your monitoring tools directly within GitRepo. Streamline the investigation of your alerts and the escalation of alerts to incidents.',
       ),
       buttonText: s__('AlertManagement|Authorize external service'),
     },

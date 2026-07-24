@@ -11,7 +11,7 @@
     %p
     - link_start = '<a href="%{url}" target="_blank" rel="noopener noreferrer">'.html_safe % { url: help_page_path('user/group/settings/group_access_tokens') }
     - if current_user.can?(:create_resource_access_tokens, @group)
-      = _('Generate group access tokens scoped to this group for your applications that need access to the GitLab API.')
+      = _('Generate group access tokens scoped to this group for your applications that need access to the GitRepo API.')
       %p
         = _('You can also use group access tokens with Git to authenticate over HTTP(S). %{link_start}Learn more.%{link_end}').html_safe % { link_start: link_start, link_end: '</a>'.html_safe }
     - else

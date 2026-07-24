@@ -24,7 +24,7 @@ export const errorStatus = {
 
 export const I18N_ERROR_TRACKING_LIST = {
   integratedErrorTrackingDisabledText: s__(
-    'ErrorTracking|Integrated error tracking is %{epicLinkStart}turned off by default%{epicLinkEnd} and no longer active for this project. To re-enable error tracking on self-hosted instances, you can either %{flagLinkStart}turn on the feature flag%{flagLinkEnd} for integrated error tracking, or provide a %{settingsLinkStart}Sentry API URL and Auth Token%{settingsLinkEnd} on your project settings page. However, error tracking is not ready for production use and cannot be enabled on GitLab.com.',
+    'ErrorTracking|Integrated error tracking is %{epicLinkStart}turned off by default%{epicLinkEnd} and no longer active for this project. To re-enable error tracking on self-hosted instances, you can either %{flagLinkStart}turn on the feature flag%{flagLinkEnd} for integrated error tracking, or provide a %{settingsLinkStart}Sentry API URL and Auth Token%{settingsLinkEnd} on your project settings page. However, error tracking is not ready for production use and cannot be enabled on GitRepo.com.',
   ),
   viewProjectSettingsButton: s__('ErrorTracking|View project settings'),
 };

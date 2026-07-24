@@ -47,11 +47,11 @@ export default {
   },
   radioOptions: RADIO_OPTIONS,
   i18n: {
-    title: s__('JiraService|Welcome to GitLab for Jira'),
-    saasRadioLabel: __('GitLab.com (SaaS)'),
+    title: s__('JiraService|Welcome to GitRepo for Jira'),
+    saasRadioLabel: __('GitRepo.com (SaaS)'),
     saasRadioHelp: __('Most common'),
-    selfManagedRadioLabel: __('GitLab (self-managed)'),
-    instanceURLInputLabel: s__('JiraService|GitLab instance URL'),
+    selfManagedRadioLabel: __('GitRepo (self-managed)'),
+    instanceURLInputLabel: s__('JiraService|GitRepo instance URL'),
     instanceURLInputDescription: s__('JiraService|For example: https://gitlab.example.com'),
   },
 };

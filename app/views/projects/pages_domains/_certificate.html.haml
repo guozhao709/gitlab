@@ -24,7 +24,7 @@
           - docs_link_url = help_page_path("user/project/pages/custom_domains_ssl_tls_certification/lets_encrypt_integration.md")
           - docs_link_start = "<a href=\"%{docs_link_url}\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-nowrap\">".html_safe % { docs_link_url: docs_link_url }
           - docs_link_end = "</a>".html_safe
-          = _("Let's Encrypt is a free, automated, and open certificate authority (CA) that gives digital certificates in order to enable HTTPS (SSL/TLS) for websites. Learn more about Let's Encrypt configuration by following the %{docs_link_start}documentation on GitLab Pages%{docs_link_end}.").html_safe % { docs_link_url: docs_link_url, docs_link_start: docs_link_start, docs_link_end: docs_link_end }
+          = _("Let's Encrypt is a free, automated, and open certificate authority (CA) that gives digital certificates in order to enable HTTPS (SSL/TLS) for websites. Learn more about Let's Encrypt configuration by following the %{docs_link_start}documentation on GitRepo Pages%{docs_link_end}.").html_safe % { docs_link_url: docs_link_url, docs_link_start: docs_link_start, docs_link_end: docs_link_end }
 
 .form-group.border-section.js-shown-unless-auto-ssl{ class: ("d-none" if auto_ssl_available_and_enabled) }
   - if has_user_defined_certificate
@@ -39,7 +39,7 @@
             = link_to _('Remove'),
               clean_certificate_project_pages_domain_path(@project, domain_presenter),
               data: { confirm: _('Are you sure?'), 'confirm-btn-variant': 'danger' },
-              'aria-label': s_("GitLabPages|Remove certificate"),
+              'aria-label': s_("GitRepoPages|Remove certificate"),
               class: 'gl-button btn btn-danger btn-sm',
               method: :delete
   - else

@@ -8,7 +8,7 @@ import './commons';
 import './behaviors';
 
 // lib/utils
-import applyGitLabUIConfig from '@gitlab/ui/dist/config';
+import applyGitRepoUIConfig from '@gitlab/ui/dist/config';
 import { GlBreakpointInstance as bp } from '@gitlab/ui/dist/utils';
 import { initRails } from '~/lib/utils/rails_ujs';
 import * as popovers from '~/popovers';
@@ -42,7 +42,7 @@ import 'jh_else_ce/main_jh';
 
 logHelloDeferred();
 
-applyGitLabUIConfig();
+applyGitRepoUIConfig();
 
 // expose jQuery as global (TODO: remove these)
 window.jQuery = jQuery;

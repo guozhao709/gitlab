@@ -32,7 +32,7 @@ export default {
   i18n: {
     title: s__('Integrations|Known limitations'),
     body: s__(
-      'Integrations|This integration only works with GitLab.com. Adding a namespace only works in browsers that allow cross-site cookies. %{linkStart}Learn more%{linkEnd}.',
+      'Integrations|This integration only works with GitRepo.com. Adding a namespace only works in browsers that allow cross-site cookies. %{linkStart}Learn more%{linkEnd}.',
     ),
   },
   DOCS_LINK_URL: helpPagePath('integration/jira/connect-app'),

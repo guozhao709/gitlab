@@ -6,28 +6,41 @@ module Sidebars
       class DeploymentsMenu < ::Sidebars::Menu
         override :configure_menu_items
         def configure_menu_items
-          add_item(feature_flags_menu_item)
-          add_item(environments_menu_item)
-          add_item(releases_menu_item)
-
+          # 不添加任何子项，使其成为纯一级链接
           true
+        end
+
+        override :render?
+        def render?
+          # 覆盖父类，即使没有子项也渲染菜单
+          can?(context.current_user, :read_release, context.project)
+        end
+
+        override :link
+        def link
+          project_releases_path(context.project)
+        end
+
+        override :all_active_routes
+        def all_active_routes
+          { controller: :releases }
         end
 
         override :extra_container_html_options
         def extra_container_html_options
           {
-            class: 'shortcuts-deployments'
+            class: 'shortcuts-deployments-releases'
           }
         end
 
         override :title
         def title
-          _('Deployments')
+          _('Releases')
         end
 
         override :sprite_icon
         def sprite_icon
-          'deployments'
+          'rocket'
         end
 
         private

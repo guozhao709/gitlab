@@ -6,7 +6,7 @@ export default {
   name: 'LearnGitlabInfoCard',
   components: { GlLink, GlCard, GlIcon },
   i18n: {
-    trial: s__('Learn GitLab|Trial only'),
+    trial: s__('Learn GitRepo|Trial only'),
   },
   props: {
     title: {

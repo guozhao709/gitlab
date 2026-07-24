@@ -7,7 +7,7 @@
                 dismiss_endpoint: callouts_path },
   close_button_data: { testid: 'close-registration-enabled-callout' }) do |c|
   = c.body do
-    = _('Only allow anyone to register for accounts on GitLab instances that you intend to be used by anyone. Allowing anyone to register makes GitLab instances more vulnerable.')
+    = _('Only allow anyone to register for accounts on GitRepo instances that you intend to be used by anyone. Allowing anyone to register makes GitRepo instances more vulnerable.')
   = c.actions do
     = link_to general_admin_application_settings_path(anchor: 'js-signup-settings'), class: 'btn gl-alert-action btn-confirm btn-md gl-button' do
       %span.gl-button-text

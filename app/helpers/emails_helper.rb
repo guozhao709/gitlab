@@ -71,7 +71,7 @@ module EmailsHelper
       image_tag(
         image_url('mailers/gitlab_logo.png'),
         size: '55x55',
-        alt: 'GitLab'
+        alt: 'GitRepo'
       )
     end
   end
@@ -190,7 +190,7 @@ module EmailsHelper
   end
 
   def two_factor_authentication_disabled_text
-    _('Two-factor authentication has been disabled for your GitLab account.')
+    _('Two-factor authentication has been disabled for your GitRepo account.')
   end
 
   def re_enable_two_factor_authentication_text(format: nil)
@@ -207,7 +207,7 @@ module EmailsHelper
   end
 
   def new_email_address_added_text(email)
-    _('A new email address has been added to your GitLab account: %{email}') % { email: email }
+    _('A new email address has been added to your GitRepo account: %{email}') % { email: email }
   end
 
   def remove_email_address_text(format: nil)
@@ -229,9 +229,9 @@ module EmailsHelper
     case format
     when :html
       link_to = generate_link(url, url).html_safe
-      _('An administrator changed the password for your GitLab account on %{link_to}.').html_safe % { link_to: link_to }
+      _('An administrator changed the password for your GitRepo account on %{link_to}.').html_safe % { link_to: link_to }
     else
-      _('An administrator changed the password for your GitLab account on %{link_to}.') % { link_to: url }
+      _('An administrator changed the password for your GitRepo account on %{link_to}.') % { link_to: url }
     end
   end
 
@@ -261,7 +261,7 @@ module EmailsHelper
   def instance_access_request_text(user, format: nil)
     gitlab_host = Gitlab.config.gitlab.host
 
-    _('%{username} has asked for a GitLab account on your instance %{host}:') % { username: sanitize_name(user.name), host: gitlab_host }
+    _('%{username} has asked for a GitRepo account on your instance %{host}:') % { username: sanitize_name(user.name), host: gitlab_host }
   end
 
   def instance_access_request_link(user, format: nil)

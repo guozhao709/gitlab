@@ -106,7 +106,7 @@
             enabled: Gitlab.config.registry.enabled,
             doc_href: help_page_path('user/packages/container_registry/index'))
 
-          = feature_entry(_('GitLab Pages'),
+          = feature_entry(_('GitRepo Pages'),
             enabled: Gitlab.config.pages.enabled,
             doc_href: help_instance_configuration_url)
 
@@ -123,29 +123,29 @@
                 .js-gitlab-version-check{ data: { "size": "lg" } }
                 = link_to(sprite_icon('question'), "https://gitlab.com/gitlab-org/gitlab/-/blob/master/CHANGELOG.md", class: 'gl-ml-2', target: '_blank', rel: 'noopener noreferrer')
           %p
-            = link_to _('GitLab'), general_admin_application_settings_path
+            = link_to _('GitRepo'), general_admin_application_settings_path
             %span.float-right
               = link_to_version
           %p
-            = _('GitLab Shell')
+            = _('GitRepo Shell')
             %span.float-right
               = Gitlab::Shell.version
           %p
-            = _('GitLab Workhorse')
+            = _('GitRepo Workhorse')
             %span.float-right
               = gitlab_workhorse_version
           %p
-            = _('GitLab API')
+            = _('GitRepo API')
             %span.float-right
               = API::API::version
           - if Gitlab.config.pages.enabled
             %p
-              = _('GitLab Pages')
+              = _('GitRepo Pages')
               %span.float-right
                 = Gitlab::Pages::VERSION
           - if Gitlab::Kas.enabled?
             %p
-              = _('GitLab KAS')
+              = _('GitRepo KAS')
               %span.gl-float-right
                 = Gitlab::Kas.version
 

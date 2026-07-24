@@ -49,7 +49,7 @@ module ImportHelper
   end
 
   def import_github_authorize_message
-    _('To connect GitHub repositories, you first need to authorize GitLab to access the list of your GitHub repositories.')
+    _('To connect GitHub repositories, you first need to authorize GitRepo to access the list of your GitHub repositories.')
   end
 
   def import_github_personal_access_token_message
@@ -65,7 +65,7 @@ module ImportHelper
     if current_user.admin?
       _('Note: As an administrator you may like to configure %{github_integration_link}, which will allow login via GitHub and allow importing repositories without generating a Personal Access Token.').html_safe % { github_integration_link: github_integration_link }
     else
-      _('Note: Consider asking your GitLab administrator to configure %{github_integration_link}, which will allow login via GitHub and allow importing repositories without generating a Personal Access Token.').html_safe % { github_integration_link: github_integration_link }
+      _('Note: Consider asking your GitRepo administrator to configure %{github_integration_link}, which will allow login via GitHub and allow importing repositories without generating a Personal Access Token.').html_safe % { github_integration_link: github_integration_link }
     end
   end
 end

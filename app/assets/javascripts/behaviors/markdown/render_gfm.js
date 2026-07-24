@@ -8,7 +8,7 @@ import renderMermaid from './render_mermaid';
 import renderSandboxedMermaid from './render_sandboxed_mermaid';
 import renderMetrics from './render_metrics';
 
-// Render GitLab flavoured Markdown
+// Render GitRepo flavoured Markdown
 //
 // Delegates to syntax highlight and render math & mermaid diagrams.
 //

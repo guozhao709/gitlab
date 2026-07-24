@@ -64,7 +64,7 @@
             = form.label :default_git_depth, _('Git shallow clone'), class: 'label-bold'
             = form.number_field :default_git_depth, { class: 'form-control gl-form-input', min: 0, max: 1000 }
             %p.form-text.text-muted
-              = html_escape(_('The number of changes to fetch from GitLab when cloning a repository. Lower values can speed up pipeline execution. Set to %{code_open}0%{code_close} or blank to fetch all branches and tags for each job')) % { code_open: '<code>'.html_safe, code_close: '</code>'.html_safe }
+              = html_escape(_('The number of changes to fetch from GitRepo when cloning a repository. Lower values can speed up pipeline execution. Set to %{code_open}0%{code_close} or blank to fetch all branches and tags for each job')) % { code_open: '<code>'.html_safe, code_close: '</code>'.html_safe }
               = link_to sprite_icon('question-o'), help_page_path('ci/pipelines/settings', anchor: 'limit-the-number-of-changes-fetched-during-clone'), target: '_blank', rel: 'noopener noreferrer'
 
         %hr

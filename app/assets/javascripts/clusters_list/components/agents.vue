@@ -17,7 +17,7 @@ export default {
   i18n: {
     feedbackBannerTitle: s__('ClusterAgents|Tell us what you think'),
     feedbackBannerText: s__(
-      'ClusterAgents|We would love to learn more about your experience with the GitLab Agent.',
+      'ClusterAgents|We would love to learn more about your experience with the GitRepo Agent.',
     ),
     feedbackBannerButton: s__('ClusterAgents|Give feedback'),
     error: s__('ClusterAgents|An error occurred while loading your agents'),

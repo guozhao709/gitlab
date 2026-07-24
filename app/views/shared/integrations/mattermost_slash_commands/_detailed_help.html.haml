@@ -1,5 +1,5 @@
 - pretty_name = @project&.full_name ? html_escape(@project&.full_name) : '<' + _('project name') + '>'
-- run_actions_text = html_escape(s_("ProjectService|Perform common operations on GitLab project: %{project_name}")) % { project_name: pretty_name }
+- run_actions_text = html_escape(s_("ProjectService|Perform common operations on GitRepo project: %{project_name}")) % { project_name: pretty_name }
 
 %p= s_("ProjectService|To configure this integration, you should:")
 %ul.list-unstyled.indent-list
@@ -24,7 +24,7 @@
     %strong Active
     check box, then select
     %strong Save changes
-    to start using GitLab inside Mattermost!
+    to start using GitRepo inside Mattermost!
 
 %hr
 
@@ -32,7 +32,7 @@
   .form-group
     = label_tag :display_name, _('Display name'), class: 'col-12 col-form-label label-bold'
     .col-12.input-group
-      = text_field_tag :display_name, "GitLab / #{pretty_name}".html_safe, class: 'form-control form-control-sm', readonly: 'readonly'
+      = text_field_tag :display_name, "GitRepo / #{pretty_name}".html_safe, class: 'form-control form-control-sm', readonly: 'readonly'
       .input-group-append
         = clipboard_button(target: '#display_name', class: 'gl-button btn-default btn-icon input-group-text')
 
@@ -68,7 +68,7 @@
   .form-group
     = label_tag :response_username, s_('MattermostService|Response username'), class: 'col-12 col-form-label label-bold'
     .col-12.input-group
-      = text_field_tag :response_username, 'GitLab', class: 'form-control form-control-sm', readonly: 'readonly'
+      = text_field_tag :response_username, 'GitRepo', class: 'form-control form-control-sm', readonly: 'readonly'
       .input-group-append
         = clipboard_button(target: '#response_username', class: 'gl-button btn-default btn-icon input-group-text')
 

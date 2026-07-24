@@ -14,7 +14,7 @@ import { s__ } from '~/locale';
 export default {
   i18n: {
     toggleLabel: s__(
-      "ClusterIntegration|Enable or disable GitLab's connection to your Kubernetes cluster.",
+      "ClusterIntegration|Enable or disable GitRepo's connection to your Kubernetes cluster.",
     ),
   },
   components: {
@@ -65,7 +65,7 @@ export default {
   <div class="d-flex gl-flex-direction-column">
     <gl-form-group>
       <div class="gl-display-flex gl-align-items-center">
-        <h4 class="gl-pr-3 gl-m-0">{{ s__('ClusterIntegration|GitLab Integration') }}</h4>
+        <h4 class="gl-pr-3 gl-m-0">{{ s__('ClusterIntegration|GitRepo Integration') }}</h4>
 
         <div class="js-cluster-enable-toggle-area">
           <gl-toggle

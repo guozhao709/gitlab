@@ -84,7 +84,7 @@ export default {
     return {
       selectedTemplate: this.initialSelectedTemplate,
       selectedFileTemplateProjectId: this.initialSelectedFileTemplateProjectId,
-      outgoingName: this.initialOutgoingName || __('GitLab Support Bot'),
+      outgoingName: this.initialOutgoingName || __('GitRepo Support Bot'),
       projectKey: this.initialProjectKey,
       searchTerm: '',
       projectKeyError: null,

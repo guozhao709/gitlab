@@ -11,11 +11,11 @@ const trackingMixin = Tracking.mixin({ label: EVENT_LABEL });
 export default {
   name: 'TerraformNotification',
   i18n: {
-    title: s__('TerraformBanner|Using Terraform? Try the GitLab Managed Terraform State'),
+    title: s__('TerraformBanner|Using Terraform? Try the GitRepo Managed Terraform State'),
     description: s__(
-      'TerraformBanner|The GitLab managed Terraform state backend can store your Terraform state easily and securely, and spares you from setting up additional remote resources. Its features include: versioning, encryption of the state file both in transit and at rest, locking, and remote Terraform plan/apply execution.',
+      'TerraformBanner|The GitRepo managed Terraform state backend can store your Terraform state easily and securely, and spares you from setting up additional remote resources. Its features include: versioning, encryption of the state file both in transit and at rest, locking, and remote Terraform plan/apply execution.',
     ),
-    buttonText: s__("TerraformBanner|Learn more about GitLab's Backend State"),
+    buttonText: s__("TerraformBanner|Learn more about GitRepo's Backend State"),
   },
   components: {
     GlBanner,

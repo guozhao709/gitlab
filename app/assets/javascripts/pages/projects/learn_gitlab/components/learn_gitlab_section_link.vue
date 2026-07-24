@@ -140,7 +140,7 @@ export default {
             data-testid="video-tutorial-link"
             data-track-action="click_video_link"
             :data-track-label="linkTitle"
-            data-track-property="Growth::Conversion::Experiment::LearnGitLab"
+            data-track-property="Growth::Conversion::Experiment::LearnGitRepo"
             data-track-experiment="video_tutorials_continuous_onboarding"
           />
         </template>

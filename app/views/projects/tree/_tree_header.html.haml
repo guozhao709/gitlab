@@ -13,7 +13,7 @@
     #js-tree-history-link{ data: { history_link: project_commits_path(@project, @ref), is_project_overview: is_project_overview.to_s } }
 
     = render 'projects/find_file_link'
-    = render 'shared/web_ide_button', blob: nil
+    -# = render 'shared/web_ide_button', blob: nil
     = render 'projects/buttons/download', project: @project, ref: @ref
 
     .project-clone-holder.d-none.d-md-inline-block>

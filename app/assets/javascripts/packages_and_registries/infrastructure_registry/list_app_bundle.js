@@ -20,7 +20,7 @@ export default () => {
     provide: {
       emptyPageTitle: s__('InfrastructureRegistry|You have no Terraform modules in your project'),
       noResultsText: s__(
-        'InfrastructureRegistry|Terraform modules are the main way to package and reuse resource configurations with Terraform. Learn more about how to %{noPackagesLinkStart}create Terraform modules%{noPackagesLinkEnd} in GitLab.',
+        'InfrastructureRegistry|Terraform modules are the main way to package and reuse resource configurations with Terraform. Learn more about how to %{noPackagesLinkStart}create Terraform modules%{noPackagesLinkEnd} in GitRepo.',
       ),
     },
     render(createElement) {

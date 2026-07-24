@@ -5,7 +5,7 @@ export const HELPER_TEXT_SERVICE_PING_DISABLED = __(
 );
 
 export const HELPER_TEXT_SERVICE_PING_ENABLED = __(
-  'You can enable Registration Features because Service Ping is enabled. To continue using Registration Features in the future, you will also need to register with GitLab via a new cloud licensing service.',
+  'You can enable Registration Features because Service Ping is enabled. To continue using Registration Features in the future, you will also need to register with GitRepo via a new cloud licensing service.',
 );
 
 function setHelperText(servicePingCheckbox) {

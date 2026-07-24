@@ -62,21 +62,21 @@ export default {
         return null;
       }
 
-      // 1. person who is an author of a commit might be a GitLab user
+      // 1. person who is an author of a commit might be a GitRepo user
       if (pipelineCommitAuthor) {
-        // 2. if person who is an author of a commit is a GitLab user
-        // they can have a GitLab avatar
+        // 2. if person who is an author of a commit is a GitRepo user
+        // they can have a GitRepo avatar
         if (pipelineCommitAuthor?.avatar_url) {
           commitAuthorInformation = pipelineCommitAuthor;
 
-          // 3. If GitLab user does not have avatar, they might have a Gravatar
+          // 3. If GitRepo user does not have avatar, they might have a Gravatar
         } else if (pipelineCommit.author_gravatar_url) {
           commitAuthorInformation = {
             ...pipelineCommitAuthor,
             avatar_url: pipelineCommit.author_gravatar_url,
           };
         }
-        // 4. If committer is not a GitLab User, they can have a Gravatar
+        // 4. If committer is not a GitRepo User, they can have a Gravatar
       } else {
         commitAuthorInformation = {
           avatar_url: pipelineCommit.author_gravatar_url,

@@ -19,7 +19,7 @@ export default {
     deploymentTargetLabel: s__('Deployment Target|Project deployment target (optional)'),
     defaultOption: s__('Deployment Target|Select the deployment target'),
     k8sEducationText: s__(
-      'Deployment Target|%{linkStart}How to provision or deploy to Kubernetes clusters from GitLab?%{linkEnd}',
+      'Deployment Target|%{linkStart}How to provision or deploy to Kubernetes clusters from GitRepo?%{linkEnd}',
     ),
   },
   deploymentTargets: DEPLOYMENT_TARGET_SELECTIONS,

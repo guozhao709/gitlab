@@ -715,7 +715,7 @@ export default {
         :help-path="pagesHelpPath"
         :label="$options.i18n.pagesLabel"
         :help-text="
-          s__('ProjectSettings|With GitLab Pages you can host your static websites on GitLab.')
+          s__('ProjectSettings|With GitRepo Pages you can host your static websites on GitRepo.')
         "
       >
         <project-feature-setting

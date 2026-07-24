@@ -393,7 +393,7 @@ export default {
             v-else-if="conflictResolutionPath"
             :message="
               __(
-                'You can %{gitlabLinkStart}resolve conflicts on GitLab%{gitlabLinkEnd} or %{resolveLocallyStart}resolve it locally%{resolveLocallyEnd}.',
+                'You can %{gitlabLinkStart}resolve conflicts on GitRepo%{gitlabLinkEnd} or %{resolveLocallyStart}resolve it locally%{resolveLocallyEnd}.',
               )
             "
           >

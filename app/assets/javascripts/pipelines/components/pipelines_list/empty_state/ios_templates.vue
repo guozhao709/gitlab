@@ -34,13 +34,13 @@ export default {
   runnerDocsLink: 'https://docs.gitlab.com/runner/install/osx',
   whatElseLink: helpPagePath('ci/index.md'),
   i18n: {
-    title: s__('Pipelines|Get started with GitLab CI/CD'),
+    title: s__('Pipelines|Get started with GitRepo CI/CD'),
     subtitle: s__('Pipelines|Building for iOS?'),
     explanation: s__("Pipelines|We'll walk you through how to deploy to iOS in two easy steps."),
     runnerSetupTitle: s__('Pipelines|1. Set up a runner'),
     runnerSetupButton: s__('Pipelines|Set up a runner'),
     runnerSetupBodyUnfinished: s__(
-      'Pipelines|GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline.',
+      'Pipelines|GitRepo Runner is an application that works with GitRepo CI/CD to run jobs in a pipeline.',
     ),
     runnerSetupBodyFinished: s__(
       'Pipelines|You have runners available to run your job now. No need to do anything else.',
@@ -49,7 +49,7 @@ export default {
       "Pipelines|Let's get that runner set up! %{emojiStart}tada%{emojiEnd}",
     ),
     runnerSetupPopoverBodyLine1: s__(
-      'Pipelines|Follow these instructions to install GitLab Runner on macOS.',
+      'Pipelines|Follow these instructions to install GitRepo Runner on macOS.',
     ),
     runnerSetupPopoverBodyLine2: s__(
       'Pipelines|Need more information to set up your runner? %{linkStart}Check out our documentation%{linkEnd}.',
@@ -60,7 +60,7 @@ export default {
     noWalkthroughTitle: s__("Pipelines|Don't need a guide? Jump in right away with a template."),
     noWalkthroughExplanation: s__('Pipelines|Based on your project, we recommend this template:'),
     notBuildingForIos: s__(
-      "Pipelines|Not building for iOS or not what you're looking for? %{linkStart}See what else%{linkEnd} GitLab CI/CD has to offer.",
+      "Pipelines|Not building for iOS or not what you're looking for? %{linkStart}See what else%{linkEnd} GitRepo CI/CD has to offer.",
     ),
   },
   data() {

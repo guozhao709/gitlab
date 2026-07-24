@@ -32,7 +32,7 @@ export default {
     noResultsText: {
       from: 'noResultsText',
       default: s__(
-        'PackageRegistry|Learn how to %{noPackagesLinkStart}publish and share your packages%{noPackagesLinkEnd} with GitLab.',
+        'PackageRegistry|Learn how to %{noPackagesLinkStart}publish and share your packages%{noPackagesLinkEnd} with GitRepo.',
       ),
     },
   },

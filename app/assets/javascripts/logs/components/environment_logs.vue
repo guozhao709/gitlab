@@ -163,7 +163,7 @@ export default {
       <gl-sprintf
         :message="
           s__(
-            'Deprecations|The logs and tracing features were deprecated in GitLab 14.7 and are %{epicStart} scheduled for removal %{epicEnd} in GitLab 15.0.',
+            'Deprecations|The logs and tracing features were deprecated in GitRepo 14.7 and are %{epicStart} scheduled for removal %{epicEnd} in GitRepo 15.0.',
           )
         "
       >

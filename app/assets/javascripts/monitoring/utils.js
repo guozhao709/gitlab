@@ -382,7 +382,7 @@ const resultMapper = ({ metric, values = [] }) => [
 /**
  * Bar charts graph data parser to massage data from
  * backend to a format acceptable by bar charts component
- * in GitLab UI
+ * in GitRepo UI
  *
  * e.g.
  * {

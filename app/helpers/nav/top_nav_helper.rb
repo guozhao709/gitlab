@@ -120,26 +120,26 @@ module Nav
         builder.add_view(GROUPS_VIEW, container_view_props(namespace: 'groups', current_item: current_item, submenu: groups_submenu))
       end
 
-      if dashboard_nav_link?(:milestones)
-        builder.add_primary_menu_item_with_shortcut(
-          id: 'milestones',
-          title: _('Milestones'),
-          href: dashboard_milestones_path,
-          active: active_nav_link?(controller: 'dashboard/milestones'),
-          icon: 'clock',
-          data: { qa_selector: 'milestones_link' },
-          shortcut_class: 'dashboard-shortcuts-milestones'
-        )
-      end
+      # if dashboard_nav_link?(:milestones)
+      #   builder.add_primary_menu_item_with_shortcut(
+      #     id: 'milestones',
+      #     title: _('Milestones'),
+      #     href: dashboard_milestones_path,
+      #     active: active_nav_link?(controller: 'dashboard/milestones'),
+      #     icon: 'clock',
+      #     data: { qa_selector: 'milestones_link' },
+      #     shortcut_class: 'dashboard-shortcuts-milestones'
+      #   )
+      # end
 
-      if dashboard_nav_link?(:snippets)
-        builder.add_primary_menu_item_with_shortcut(
-          active: active_nav_link?(controller: 'dashboard/snippets'),
-          data: { qa_selector: 'snippets_link' },
-          href: dashboard_snippets_path,
-          **snippets_menu_item_attrs
-        )
-      end
+      # if dashboard_nav_link?(:snippets)
+      #   builder.add_primary_menu_item_with_shortcut(
+      #     active: active_nav_link?(controller: 'dashboard/snippets'),
+      #     data: { qa_selector: 'snippets_link' },
+      #     href: dashboard_snippets_path,
+      #     **snippets_menu_item_attrs
+      #   )
+      # end
 
       if dashboard_nav_link?(:activity)
         builder.add_primary_menu_item_with_shortcut(
@@ -164,7 +164,7 @@ module Nav
           active: active_nav_link?(controller: 'admin/dashboard'),
           icon: 'admin',
           css_class: 'qa-admin-area-link',
-          href: admin_root_path
+          href: admin_projects_path
         )
       end
 

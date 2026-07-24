@@ -7,7 +7,7 @@ module Sidebars
         override :configure_menu_items
         def configure_menu_items
           add_item(activity_menu_item)
-          add_item(labels_menu_item)
+          # add_item(labels_menu_item)
           add_item(members_menu_item)
 
           true

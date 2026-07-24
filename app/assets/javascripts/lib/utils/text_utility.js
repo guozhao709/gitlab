@@ -428,7 +428,7 @@ export function insertFinalNewline(content, endOfLine = '\n') {
 }
 
 export const markdownConfig = {
-  // allowedTags from GitLab's inline HTML guidelines
+  // allowedTags from GitRepo's inline HTML guidelines
   // https://docs.gitlab.com/ee/user/markdown.html#inline-html
   ALLOWED_TAGS: [
     'a',

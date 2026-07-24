@@ -42,7 +42,7 @@ const logUserTimingMetrics = () => {
 
 const initPerformanceBarLog = () => {
   console.log(
-    `%c ${String.fromCodePoint(0x1f98a)} GitLab performance bar`,
+    `%c ${String.fromCodePoint(0x1f98a)} GitRepo performance bar`,
     'width:100%; background-color: #292961; color: #FFFFFF; padding: 10px; display:block;',
   );
 

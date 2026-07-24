@@ -120,7 +120,7 @@ export default {
             :data-track-action="$options.SP_SHOW_TRACK_EVENT"
             :data-track-label="$options.SP_TRACK_LABEL"
           >
-            {{ __('Try out GitLab Pipelines') }}
+            {{ __('Try out GitRepo Pipelines') }}
           </gl-button>
         </div>
       </div>

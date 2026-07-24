@@ -187,7 +187,7 @@ export default {
         >
           <gl-icon
             name="question"
-            :aria-label="__('Link to go to GitLab pipeline documentation')"
+            :aria-label="__('Link to go to GitRepo pipeline documentation')"
           />
         </gl-link>
       </p>

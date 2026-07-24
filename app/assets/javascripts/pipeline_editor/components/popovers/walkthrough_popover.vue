@@ -5,7 +5,7 @@ import { s__ } from '~/locale';
 export default {
   directives: { Outside },
   i18n: {
-    title: s__('pipelineEditorWalkthrough|See how GitLab pipelines work'),
+    title: s__('pipelineEditorWalkthrough|See how GitRepo pipelines work'),
     description: s__(
       'pipelineEditorWalkthrough|This %{codeStart}.gitlab-ci.yml%{codeEnd} file creates a simple test pipeline.',
     ),

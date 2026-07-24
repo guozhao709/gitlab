@@ -105,7 +105,7 @@ export default {
       <gl-sprintf
         :message="
           __(
-            'Add %{linkStart}assets%{linkEnd} to your Release. GitLab automatically includes read-only assets, like source code and release evidence.',
+            'Add %{linkStart}assets%{linkEnd} to your Release. GitRepo automatically includes read-only assets, like source code and release evidence.',
           )
         "
       >
@@ -124,7 +124,7 @@ export default {
     <p>
       {{
         __(
-          'Point to any links you like: documentation, built binaries, or other related materials. These can be internal or external links from your GitLab instance. Each URL and link title must be unique.',
+          'Point to any links you like: documentation, built binaries, or other related materials. These can be internal or external links from your GitRepo instance. Each URL and link title must be unique.',
         )
       }}
     </p>

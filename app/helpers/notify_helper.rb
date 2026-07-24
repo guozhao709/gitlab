@@ -13,7 +13,7 @@ module NotifyHelper
     default_description =
       case source
       when Project
-        s_('InviteEmail|Projects are used to host and collaborate on code, track issues, and continuously build, test, and deploy your app with built-in GitLab CI/CD.')
+        s_('InviteEmail|Projects are used to host and collaborate on code, track issues, and continuously build, test, and deploy your app with built-in GitRepo CI/CD.')
       when Group
         s_('InviteEmail|Groups assemble related projects together and grant members access to several projects at once.')
       end

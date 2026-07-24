@@ -46,10 +46,10 @@ export function initDefaultTrackers() {
   // must be after enableActivityTracking
   const standardContext = getStandardContext();
   const experimentContexts = getAllExperimentContexts();
-  // To not expose personal identifying information, the page title is hardcoded as `GitLab`
+  // To not expose personal identifying information, the page title is hardcoded as `GitRepo`
   // See: https://gitlab.com/gitlab-org/gitlab/-/issues/345243
-  window.snowplow('trackPageView', 'GitLab', [standardContext, ...experimentContexts]);
-  window.snowplow('setDocumentTitle', 'GitLab');
+  window.snowplow('trackPageView', 'GitRepo', [standardContext, ...experimentContexts]);
+  window.snowplow('setDocumentTitle', 'GitRepo');
 
   if (window.snowplowOptions.formTracking) {
     Tracking.enableFormTracking(opts.formTrackingConfig);
