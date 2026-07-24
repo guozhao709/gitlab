@@ -1,0 +1,84 @@
+import { i18n } from './constants';
+
+const textBuilder = (results, boldNumbers = false) => {
+  const { failed, errored, resolved, total } = results;
+
+  const failedOrErrored = (failed || 0) + (errored || 0);
+  const failedString = failed ? i18n.failedClause(failed, boldNumbers) : null;
+  const erroredString = errored ? i18n.erroredClause(errored, boldNumbers) : null;
+  const combinedString =
+    failed && errored ? `${failedString}, ${erroredString}` : failedString || erroredString;
+  const resolvedString = resolved ? i18n.resolvedClause(resolved, boldNumbers) : null;
+  const totalString = total ? i18n.totalClause(total, boldNumbers) : null;
+
+  let resultsString = i18n.noChanges(boldNumbers);
+
+  if (failedOrErrored) {
+    if (resolved) {
+      resultsString = i18n.resultsString(combinedString, resolvedString);
+    } else {
+      resultsString = combinedString;
+    }
+  } else if (resolved) {
+    resultsString = resolvedString;
+  }
+
+  return `${resultsString}, ${totalString}`;
+};
+
+export const summaryTextBuilder = (name = '', results = {}) => {
+  const resultsString = textBuilder(results, true);
+  return i18n.summaryText(name, resultsString);
+};
+
+export const reportTextBuilder = ({ name = '', summary = {}, status }) => {
+  if (!name) {
+    return i18n.reportError;
+  }
+  if (status === 'error') {
+    return i18n.reportErrorWithName(name);
+  }
+
+  const resultsString = textBuilder(summary);
+  return i18n.summaryText(name, resultsString);
+};
+
+export const recentFailuresTextBuilder = (summary = {}) => {
+  const { failed, recentlyFailed } = summary;
+  if (!failed || !recentlyFailed) return '';
+
+  return i18n.recentFailureSummary(recentlyFailed, failed);
+};
+
+export const reportSubTextBuilder = ({ suite_errors, summary }) => {
+  if (suite_errors?.head || suite_errors?.base) {
+    const errors = [];
+    if (suite_errors?.head) {
+      errors.push(`${i18n.headReportParsingError} ${suite_errors.head}`);
+    }
+    if (suite_errors?.base) {
+      errors.push(`${i18n.baseReportParsingError} ${suite_errors.base}`);
+    }
+    return errors.join('<br />');
+  }
+  return recentFailuresTextBuilder(summary);
+};
+
+export const countRecentlyFailedTests = (subject) => {
+  // handle either a single report or an array of reports
+  const reports = !subject.length ? [subject] : subject;
+
+  return reports
+    .map((report) => {
+      return (
+        [report.new_failures, report.existing_failures, report.resolved_failures]
+          // only count tests which have failed more than once
+          .map(
+            (failureArray) =>
+              failureArray.filter((failure) => failure.recent_failures?.count > 1).length,
+          )
+          .reduce((total, count) => total + count, 0)
+      );
+    })
+    .reduce((total, count) => total + count, 0);
+};

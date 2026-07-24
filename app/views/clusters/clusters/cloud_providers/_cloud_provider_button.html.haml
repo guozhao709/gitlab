@@ -1,0 +1,11 @@
+- logo_path = local_assigns.fetch(:logo_path)
+- help_path = local_assigns.fetch(:help_path)
+- label = local_assigns.fetch(:label)
+- last = local_assigns.fetch(:last, false)
+- classes = ["btn btn-confirm gl-button btn-confirm-secondary gl-flex-direction-column gl-w-half"]
+- conditional_classes = [("gl-mr-5" unless last)]
+
+= link_to help_path, class: classes + conditional_classes do
+  .svg-content.gl-p-3= image_tag logo_path, alt: label, class: "gl-w-64 gl-h-64"
+  %span
+    = label
