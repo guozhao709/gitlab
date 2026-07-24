@@ -389,13 +389,13 @@ export default {
         </template>
         <ul>
           <li v-if="error.gitlabCommit">
-            <strong class="bold">{{ __('GitLab commit') }}:</strong>
+            <strong class="bold">{{ __('GitRepo commit') }}:</strong>
             <gl-link :href="error.gitlabCommitPath">
               <span>{{ error.gitlabCommit.substr(0, 10) }}</span>
             </gl-link>
           </li>
           <li v-if="error.gitlabIssuePath">
-            <strong class="bold">{{ __('GitLab Issue') }}:</strong>
+            <strong class="bold">{{ __('GitRepo Issue') }}:</strong>
             <gl-link :href="error.gitlabIssuePath">
               <span>{{ error.gitlabIssuePath }}</span>
             </gl-link>
@@ -416,7 +416,7 @@ export default {
             <strong class="bold">{{ __('First seen') }}:</strong>
             <time-ago-tooltip :time="error.firstSeen" />
             <gl-link v-if="error.integrated" :href="firstCommitLink">
-              {{ __('GitLab commit') }}: {{ error.firstReleaseVersion }}
+              {{ __('GitRepo commit') }}: {{ error.firstReleaseVersion }}
             </gl-link>
             <gl-link v-else :href="firstReleaseLink" target="_blank">
               {{ __('Release') }}: {{ error.firstReleaseVersion }}
@@ -426,7 +426,7 @@ export default {
             <strong class="bold">{{ __('Last seen') }}:</strong>
             <time-ago-tooltip :time="error.lastSeen" />
             <gl-link v-if="error.integrated" :href="lastCommitLink">
-              {{ __('GitLab commit') }}: {{ error.lastReleaseVersion }}
+              {{ __('GitRepo commit') }}: {{ error.lastReleaseVersion }}
             </gl-link>
             <gl-link v-else :href="lastReleaseLink" target="_blank">
               {{ __('Release') }}: {{ error.lastReleaseVersion }}

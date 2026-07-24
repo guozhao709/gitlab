@@ -5,7 +5,7 @@ import { s__ } from '~/locale';
 
 export const GOOGLE_CLOUD_REVOKE_TITLE = s__('GoogleCloud|Revoke authorizations');
 export const GOOGLE_CLOUD_REVOKE_DESCRIPTION = s__(
-  'GoogleCloud|Revoke authorizations granted to GitLab. This does not invalidate service accounts.',
+  'GoogleCloud|Revoke authorizations granted to GitRepo. This does not invalidate service accounts.',
 );
 
 export default {

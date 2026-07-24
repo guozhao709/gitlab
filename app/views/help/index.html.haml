@@ -16,7 +16,7 @@
 
 - unless Gitlab::CurrentSettings.help_page_hide_commercial_content?
   %p.slead
-    = _('GitLab is open source software to collaborate on code.')
+    = _('GitRepo is open source software to collaborate on code.')
     %br
     = _('Manage git repositories with fine-grained access controls that keep your code secure.')
     %br
@@ -24,10 +24,10 @@
     %br
     = _('Each project can also have an issue tracker and a wiki.')
     %br
-    = _('Used by more than 100,000 organizations, GitLab is the most popular solution to manage git repositories on-premises.')
+    = _('Used by more than 100,000 organizations, GitRepo is the most popular solution to manage git repositories on-premises.')
     %br
     - link_to_promo = link_to(promo_host, promo_url, target: '_blank', rel: 'noopener noreferrer')
-    = _("Read more about GitLab at %{link_to_promo}.").html_safe % { link_to_promo: link_to_promo }
+    = _("Read more about GitRepo at %{link_to_promo}.").html_safe % { link_to_promo: link_to_promo }
 
 %p= link_to _('Check the current instance configuration '), help_instance_configuration_url
 %hr
@@ -50,4 +50,4 @@
             = _('Use shortcuts')
         - unless Gitlab::CurrentSettings.help_page_hide_commercial_content?
           %li= link_to _('Get a support subscription'), "https://#{ApplicationHelper.promo_host}/pricing/"
-          %li= link_to _('Compare GitLab editions'), "https://#{ApplicationHelper.promo_host}/features/#compare"
+          %li= link_to _('Compare GitRepo editions'), "https://#{ApplicationHelper.promo_host}/features/#compare"

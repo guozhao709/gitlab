@@ -16,7 +16,7 @@ export const types = {
 
 export const AWS_TIP_DISMISSED_COOKIE_NAME = 'ci_variable_list_constants_aws_tip_dismissed';
 export const AWS_TIP_MESSAGE = __(
-  '%{deployLinkStart}Use a template to deploy to ECS%{deployLinkEnd}, or use a docker image to %{commandsLinkStart}run AWS commands in GitLab CI/CD%{commandsLinkEnd}.',
+  '%{deployLinkStart}Use a template to deploy to ECS%{deployLinkEnd}, or use a docker image to %{commandsLinkStart}run AWS commands in GitRepo CI/CD%{commandsLinkEnd}.',
 );
 
 export const EVENT_LABEL = 'ci_variable_modal';

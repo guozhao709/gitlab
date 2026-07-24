@@ -26,19 +26,19 @@ export const I18N_STATUS_POPOVER_TITLE = s__('Runners|Runner statuses');
 
 export const I18N_STATUS_POPOVER_NEVER_CONTACTED = s__('Runners|Never contacted:');
 export const I18N_STATUS_POPOVER_NEVER_CONTACTED_DESCRIPTION = s__(
-  'Runners|Runner has never contacted GitLab (when you register a runner, use %{codeStart}gitlab-runner run%{codeEnd} to bring it online)',
+  'Runners|Runner has never contacted GitRepo (when you register a runner, use %{codeStart}gitlab-runner run%{codeEnd} to bring it online)',
 );
 export const I18N_STATUS_POPOVER_ONLINE = s__('Runners|Online:');
 export const I18N_STATUS_POPOVER_ONLINE_DESCRIPTION = s__(
-  'Runners|Runner has contacted GitLab within the last %{elapsedTime}',
+  'Runners|Runner has contacted GitRepo within the last %{elapsedTime}',
 );
 export const I18N_STATUS_POPOVER_OFFLINE = s__('Runners|Offline:');
 export const I18N_STATUS_POPOVER_OFFLINE_DESCRIPTION = s__(
-  'Runners|Runner has not contacted GitLab in more than %{elapsedTime}',
+  'Runners|Runner has not contacted GitRepo in more than %{elapsedTime}',
 );
 export const I18N_STATUS_POPOVER_STALE = s__('Runners|Stale:');
 export const I18N_STATUS_POPOVER_STALE_DESCRIPTION = s__(
-  'Runners|Runner has not contacted GitLab in more than %{elapsedTime}',
+  'Runners|Runner has not contacted GitRepo in more than %{elapsedTime}',
 );
 
 // Status tooltips

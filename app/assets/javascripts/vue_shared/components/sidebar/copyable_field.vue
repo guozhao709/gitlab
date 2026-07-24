@@ -5,7 +5,7 @@ import ClipboardButton from '~/vue_shared/components/clipboard_button.vue';
 
 /**
  * Renders an inline field, whose value can be copied to the clipboard,
- * for use in the GitLab sidebar (issues, MRs, etc.).
+ * for use in the GitRepo sidebar (issues, MRs, etc.).
  */
 export default {
   name: 'CopyableField',

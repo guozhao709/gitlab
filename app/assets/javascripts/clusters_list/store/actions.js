@@ -10,7 +10,7 @@ import * as types from './mutation_types';
 const allNodesPresent = (clusters, retryCount) => {
   /*
     Nodes are coming from external Kubernetes clusters.
-    They may fail for reasons GitLab cannot control.
+    They may fail for reasons GitRepo cannot control.
     MAX_REQUESTS will ensure this poll stops at some point.
   */
   return retryCount > MAX_REQUESTS || clusters.every((cluster) => cluster.nodes != null);

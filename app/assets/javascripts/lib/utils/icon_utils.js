@@ -2,7 +2,7 @@ import { memoize } from 'lodash';
 import axios from '~/lib/utils/axios_utils';
 
 /**
- * Resolves to a DOM that contains GitLab icons
+ * Resolves to a DOM that contains GitRepo icons
  * in svg format. Memoized to avoid duplicate requests
  */
 const getSvgDom = memoize(() =>

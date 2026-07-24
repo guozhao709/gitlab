@@ -347,7 +347,7 @@ export default {
     </form>
     <gl-collapse :visible="isTipVisible">
       <gl-alert
-        :title="__('Deploying to AWS is easy with GitLab')"
+        :title="__('Deploying to AWS is easy with GitRepo')"
         variant="tip"
         data-testid="aws-guidance-tip"
         @dismiss="dismissTip"

@@ -66,11 +66,11 @@ export default {
   },
   i18n: {
     sectionDescription: s__(
-      'JiraService|Work on Jira issues without leaving GitLab. Add a Jira menu to access a read-only list of your Jira issues.',
+      'JiraService|Work on Jira issues without leaving GitRepo. Add a Jira menu to access a read-only list of your Jira issues.',
     ),
     enableCheckboxLabel: s__('JiraService|Enable Jira issues'),
     enableCheckboxHelp: s__(
-      'JiraService|Warning: All GitLab users with access to this GitLab project can view all issues from the Jira project you select.',
+      'JiraService|Warning: All GitRepo users with access to this GitRepo project can view all issues from the Jira project you select.',
     ),
     projectKeyLabel: s__('JiraService|Jira project key'),
     projectKeyPlaceholder: s__('JiraService|For example, AB'),

@@ -23,7 +23,7 @@ export const CLUSTER_ERRORS = {
   authentication_error: {
     tableText: s__('ClusterIntegration|Unable to Authenticate'),
     title: s__('ClusterIntegration|Authentication Error'),
-    description: s__('ClusterIntegration|GitLab failed to authenticate.'),
+    description: s__('ClusterIntegration|GitRepo failed to authenticate.'),
     troubleshootingTips: [
       s__('ClusterIntegration|Check your token'),
       s__('ClusterIntegration|Check your CA certificate'),
@@ -32,7 +32,7 @@ export const CLUSTER_ERRORS = {
   connection_error: {
     tableText: s__('ClusterIntegration|Unable to Connect'),
     title: s__('ClusterIntegration|Connection Error'),
-    description: s__('ClusterIntegration|GitLab failed to connect to the cluster.'),
+    description: s__('ClusterIntegration|GitRepo failed to connect to the cluster.'),
     troubleshootingTips: [
       s__('ClusterIntegration|Check your cluster status'),
       s__('ClusterIntegration|Make sure your API endpoint is correct'),
@@ -79,7 +79,7 @@ export const I18N_AGENT_TABLE = {
   ),
   versionOutdatedTitle: s__('ClusterAgents|Agent version update required'),
   versionOutdatedText: s__(
-    'ClusterAgents|Your agent version is out of sync with your GitLab version (v%{version}), which might cause compatibility problems. Update the agent installed on your cluster to the most recent version.',
+    'ClusterAgents|Your agent version is out of sync with your GitRepo version (v%{version}), which might cause compatibility problems. Update the agent installed on your cluster to the most recent version.',
   ),
   versionMismatchOutdatedTitle: s__('ClusterAgents|Agent version mismatch and update'),
   viewDocsText: s__('ClusterAgents|How to update an agent?'),
@@ -94,7 +94,7 @@ export const I18N_AGENT_TOKEN = {
   tokenSingleUseWarningTitle: s__(
     'ClusterAgents|You cannot see this token again after you close this window.',
   ),
-  tokenSubtitle: s__('ClusterAgents|The agent uses the token to connect with GitLab.'),
+  tokenSubtitle: s__('ClusterAgents|The agent uses the token to connect with GitRepo.'),
 
   basicInstallTitle: s__('ClusterAgents|Install using Helm (recommended)'),
   basicInstallBody: s__(
@@ -114,12 +114,12 @@ export const I18N_AGENT_MODAL = {
 
   modalTitle: s__('ClusterAgents|Connect a Kubernetes cluster'),
   modalBody: s__(
-    'ClusterAgents|Add an agent configuration file to %{linkStart}this repository%{linkEnd} and select it, or create a new one to register with GitLab:',
+    'ClusterAgents|Add an agent configuration file to %{linkStart}this repository%{linkEnd} and select it, or create a new one to register with GitRepo:',
   ),
   enableKasText: s__(
-    "ClusterAgents|Your instance doesn't have the %{linkStart}GitLab Agent Server (KAS)%{linkEnd} set up. Ask a GitLab Administrator to install it.",
+    "ClusterAgents|Your instance doesn't have the %{linkStart}GitRepo Agent Server (KAS)%{linkEnd} set up. Ask a GitRepo Administrator to install it.",
   ),
-  altText: s__('ClusterAgents|GitLab agent for Kubernetes'),
+  altText: s__('ClusterAgents|GitRepo agent for Kubernetes'),
   learnMoreLink: s__('ClusterAgents|How do I register an agent?'),
   registrationErrorTitle: s__('ClusterAgents|Failed to register an agent'),
   unknownError: s__('ClusterAgents|An unknown error occurred. Please try again.'),
@@ -148,7 +148,7 @@ export const AGENT_STATUSES = {
     icon: 'severity-critical',
     class: 'text-danger-800',
     tooltip: {
-      title: s__('ClusterAgents|Agent might not be connected to GitLab'),
+      title: s__('ClusterAgents|Agent might not be connected to GitRepo'),
       body: sprintf(
         s__(
           'ClusterAgents|The agent has not been connected in a long time. There might be a connectivity issue. Last contact was %{timeAgo}.',
@@ -161,7 +161,7 @@ export const AGENT_STATUSES = {
     icon: 'status-neutral',
     class: 'text-secondary-400',
     tooltip: {
-      title: s__('ClusterAgents|Agent never connected to GitLab'),
+      title: s__('ClusterAgents|Agent never connected to GitRepo'),
       body: s__('ClusterAgents|Make sure you are using a valid token.'),
     },
   },
@@ -169,16 +169,16 @@ export const AGENT_STATUSES = {
 
 export const I18N_AGENTS_EMPTY_STATE = {
   introText: s__(
-    'ClusterIntegration|Use the %{linkStart}GitLab agent%{linkEnd} to safely connect your Kubernetes clusters to GitLab. You can deploy your applications, run your pipelines, use Review Apps, and much more.',
+    'ClusterIntegration|Use the %{linkStart}GitRepo agent%{linkEnd} to safely connect your Kubernetes clusters to GitRepo. You can deploy your applications, run your pipelines, use Review Apps, and much more.',
   ),
 };
 
 export const I18N_CLUSTERS_EMPTY_STATE = {
   introText: s__(
-    'ClusterIntegration|Connect your cluster to GitLab through %{linkStart}cluster certificates%{linkEnd}.',
+    'ClusterIntegration|Connect your cluster to GitRepo through %{linkStart}cluster certificates%{linkEnd}.',
   ),
   alertText: s__(
-    'ClusterIntegration|The certificate-based method to connect clusters to GitLab was %{linkStart}deprecated%{linkEnd} in GitLab 14.5.',
+    'ClusterIntegration|The certificate-based method to connect clusters to GitRepo was %{linkStart}deprecated%{linkEnd} in GitRepo 14.5.',
   ),
 };
 
@@ -188,10 +188,10 @@ export const AGENT_CARD_INFO = {
   emptyTitle: s__('ClusterAgents|No agents'),
   tooltip: {
     label: s__('ClusterAgents|Recommended'),
-    title: s__('ClusterAgents|GitLab agent'),
+    title: s__('ClusterAgents|GitRepo agent'),
     text: sprintf(
       s__(
-        'ClusterAgents|The GitLab agent provides an increased level of security when connecting Kubernetes clusters to GitLab. %{linkStart}Learn more about the GitLab agent.%{linkEnd}',
+        'ClusterAgents|The GitRepo agent provides an increased level of security when connecting Kubernetes clusters to GitRepo. %{linkStart}Learn more about the GitRepo agent.%{linkEnd}',
       ),
     ),
     link: helpPagePath('user/clusters/agent/index'),

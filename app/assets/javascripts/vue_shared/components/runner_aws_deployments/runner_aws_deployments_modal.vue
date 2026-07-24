@@ -58,11 +58,11 @@ export default {
     },
   },
   i18n: {
-    title: s__('Runners|Deploy GitLab Runner in AWS'),
+    title: s__('Runners|Deploy GitRepo Runner in AWS'),
     instructions: s__(
       'Runners|Select your preferred option here. In the next step, you can choose the capacity for your runner in the AWS CloudFormation console.',
     ),
-    chooseRunner: s__('Runners|Choose your preferred GitLab Runner'),
+    chooseRunner: s__('Runners|Choose your preferred GitRepo Runner'),
     dontSeeWhatYouAreLookingFor: s__(
       "Runners|Don't see what you are looking for? See the full list of options, including a fully customizable option %{linkStart}here%{linkEnd}.",
     ),
@@ -70,7 +70,7 @@ export default {
     lessDetails: __('Less Details'),
   },
   deployButton: {
-    text: s__('Runners|Deploy GitLab Runner in AWS'),
+    text: s__('Runners|Deploy GitRepo Runner in AWS'),
     attributes: [{ variant: 'confirm' }],
   },
   closeButton: {

@@ -16,10 +16,10 @@ export default {
   },
   i18n: {
     title: s__('Pipelines|Build with confidence'),
-    description: s__(`Pipelines|GitLab CI/CD can automatically build,
-      test, and deploy your code. Let GitLab take care of time
+    description: s__(`Pipelines|GitRepo CI/CD can automatically build,
+      test, and deploy your code. Let GitRepo take care of time
       consuming tasks, so you can spend more time creating.`),
-    primaryButtonText: s__('Pipelines|Get started with GitLab CI/CD'),
+    primaryButtonText: s__('Pipelines|Get started with GitRepo CI/CD'),
   },
 };
 </script>

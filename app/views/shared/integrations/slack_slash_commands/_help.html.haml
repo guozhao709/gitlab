@@ -1,5 +1,5 @@
 - pretty_name = @project&.full_name ? html_escape(@project&.full_name) : '<' + _('project name') + '>'
-- run_actions_text = html_escape_once(s_("ProjectService|Perform common operations on GitLab project: %{project_name}") % { project_name: pretty_name })
+- run_actions_text = html_escape_once(s_("ProjectService|Perform common operations on GitRepo project: %{project_name}") % { project_name: pretty_name })
 
 .info-well
   .well-segment
@@ -49,7 +49,7 @@
         .form-group
           = label_tag :customize_name, _('Customize name'), class: 'col-12 col-form-label label-bold'
           .col-12.input-group
-            = text_field_tag :customize_name, 'GitLab', class: 'form-control form-control-sm', readonly: 'readonly'
+            = text_field_tag :customize_name, 'GitRepo', class: 'form-control form-control-sm', readonly: 'readonly'
             .input-group-append
               = clipboard_button(target: '#customize_name', class: 'input-group-text')
 
@@ -80,7 +80,7 @@
         .form-group
           = label_tag :descriptive_label, _('Descriptive label'), class: 'col-12 col-form-label label-bold'
           .col-12.input-group
-            = text_field_tag :descriptive_label, _('Perform common operations on GitLab project'), class: 'form-control form-control-sm', readonly: 'readonly'
+            = text_field_tag :descriptive_label, _('Perform common operations on GitRepo project'), class: 'form-control form-control-sm', readonly: 'readonly'
             .input-group-append
               = clipboard_button(target: '#descriptive_label', class: 'input-group-text')
 

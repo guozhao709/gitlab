@@ -7,7 +7,7 @@
     %button.btn.btn-default.gl-button.js-settings-toggle{ type: 'button' }
       = _('Expand')
     %p
-      = _('Embed an image of your existing Jaeger server in GitLab.')
+      = _('Embed an image of your existing Jaeger server in GitRepo.')
       = link_to _('Learn more.'), help_page_path('operations/tracing'), target: '_blank', rel: 'noopener noreferrer'
   .settings-content
     = form_for @project, url: project_settings_operations_path(@project), method: :patch do |f|

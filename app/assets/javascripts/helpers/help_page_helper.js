@@ -3,11 +3,11 @@ import { joinPaths, setUrlFragment } from '~/lib/utils/url_utility';
 const HELP_PAGE_URL_ROOT = '/help/';
 
 /**
- * Generate link to a GitLab documentation page.
+ * Generate link to a GitRepo documentation page.
  *
  * This is designed to mirror the Ruby `help_page_path` helper function, so that
  * the two can be used interchangeably.
- * @param {String} path           - Path to doc file relative to the doc/ directory in the GitLab repository.
+ * @param {String} path           - Path to doc file relative to the doc/ directory in the GitRepo repository.
  *                                  Optionally, including `.md` or `.html` prefix
  * @param {String} options.anchor - Name of the anchor to scroll to on the documentation page.
  */

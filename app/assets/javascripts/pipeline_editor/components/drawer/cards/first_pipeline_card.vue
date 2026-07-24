@@ -18,7 +18,7 @@ export default {
       ),
     ],
     note: s__(
-      'PipelineEditorTutorial|If you’re using a self-managed GitLab instance, %{linkStart}make sure your instance has runners available.%{linkEnd}',
+      'PipelineEditorTutorial|If you’re using a self-managed GitRepo instance, %{linkStart}make sure your instance has runners available.%{linkEnd}',
     ),
   },
   components: {

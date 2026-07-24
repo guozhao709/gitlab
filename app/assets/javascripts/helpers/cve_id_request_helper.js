@@ -1,7 +1,7 @@
 export function createCveIdRequestIssueBody(fullPath, iid) {
   return `### Vulnerability Submission
 
-**NOTE:** Only maintainers of GitLab-hosted projects may request a CVE for
+**NOTE:** Only maintainers of GitRepo-hosted projects may request a CVE for
 a vulnerability within their project.
 
 Project issue: ${fullPath}#${iid}

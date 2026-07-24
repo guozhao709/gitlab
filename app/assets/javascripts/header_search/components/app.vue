@@ -20,7 +20,7 @@ import HeaderSearchScopedItems from './header_search_scoped_items.vue';
 export default {
   name: 'HeaderSearchApp',
   i18n: {
-    searchGitlab: s__('GlobalSearch|Search GitLab'),
+    searchGitlab: s__('GlobalSearch|Search GitRepo'),
     searchInputDescribeByNoDropdown: s__(
       'GlobalSearch|Type and press the enter key to submit search.',
     ),

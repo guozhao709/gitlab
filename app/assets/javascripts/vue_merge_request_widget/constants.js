@@ -20,7 +20,7 @@ export const SP_TRACK_LABEL = 'no_pipeline_noticed';
 export const SP_SHOW_TRACK_EVENT = 'click_button';
 export const SP_SHOW_TRACK_VALUE = 10;
 export const SP_HELP_CONTENT = s__(
-  `mrWidget|GitLab %{linkStart}CI/CD can automatically build, test, and deploy your application.%{linkEnd} It only takes a few minutes to get started, and we can help you create a pipeline configuration file.`,
+  `mrWidget|GitRepo %{linkStart}CI/CD can automatically build, test, and deploy your application.%{linkEnd} It only takes a few minutes to get started, and we can help you create a pipeline configuration file.`,
 );
 export const SP_HELP_URL = 'https://docs.gitlab.com/ee/ci/quick_start/';
 export const SP_ICON_NAME = 'status_notfound';

@@ -219,7 +219,7 @@ export default {
     },
 
     unavailableFeaturesAlertTitle() {
-      return sprintf(s__('BulkImport| %{host} is running outdated GitLab version (v%{version})'), {
+      return sprintf(s__('BulkImport| %{host} is running outdated GitRepo version (v%{version})'), {
         host: this.sourceUrl,
         version: this.bulkImportSourceGroups.versionValidation.features.sourceInstanceVersion,
       });
@@ -494,7 +494,7 @@ export default {
     >
       <h1 class="gl-my-0 gl-py-4 gl-font-size-h1gl-display-flex">
         <img :src="$options.gitlabLogo" class="gl-w-6 gl-h-6 gl-mb-2 gl-display-inline gl-mr-2" />
-        {{ s__('BulkImport|Import groups from GitLab') }}
+        {{ s__('BulkImport|Import groups from GitRepo') }}
       </h1>
       <gl-link :href="historyPath" class="gl-ml-auto">{{ s__('BulkImport|History') }}</gl-link>
     </div>
@@ -507,7 +507,7 @@ export default {
       <gl-sprintf
         :message="
           s__(
-            'BulkImport|Following data will not be migrated: %{bullets} Contact system administrator of %{host} to upgrade GitLab if you need this data in your migration',
+            'BulkImport|Following data will not be migrated: %{bullets} Contact system administrator of %{host} to upgrade GitRepo if you need this data in your migration',
           )
         "
       >

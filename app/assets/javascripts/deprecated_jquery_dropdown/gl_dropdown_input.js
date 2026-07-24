@@ -1,4 +1,4 @@
-export class GitLabDropdownInput {
+export class GitRepoDropdownInput {
   constructor(input, options) {
     this.input = input;
     this.options = options;

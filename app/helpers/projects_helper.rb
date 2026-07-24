@@ -164,7 +164,7 @@ module ProjectsHelper
   end
 
   def autodeploy_flash_notice(branch_name)
-    html_escape(_("Branch %{branch_name} was created. To set up auto deploy, choose a GitLab CI Yaml template and commit your changes. %{link_to_autodeploy_doc}")) %
+    html_escape(_("Branch %{branch_name} was created. To set up auto deploy, choose a GitRepo CI Yaml template and commit your changes. %{link_to_autodeploy_doc}")) %
       { branch_name: tag.strong(truncate(sanitize(branch_name))), link_to_autodeploy_doc: link_to_autodeploy_doc }
   end
 
@@ -443,7 +443,7 @@ module ProjectsHelper
   end
 
   def import_from_gitlab_message
-    configure_oauth_import_message('GitLab.com', help_page_path("integration/gitlab"))
+    configure_oauth_import_message('GitRepo.com', help_page_path("integration/gitlab"))
   end
 
   private
@@ -452,7 +452,7 @@ module ProjectsHelper
     str = if current_user.admin?
             'ImportProjects|To enable importing projects from %{provider}, as administrator you need to configure %{link_start}OAuth integration%{link_end}'
           else
-            'ImportProjects|To enable importing projects from %{provider}, ask your GitLab administrator to configure %{link_start}OAuth integration%{link_end}'
+            'ImportProjects|To enable importing projects from %{provider}, ask your GitRepo administrator to configure %{link_start}OAuth integration%{link_end}'
           end
 
     link_start = '<a href="%{url}" target="_blank" rel="noopener noreferrer">'.html_safe % { url: help_url }

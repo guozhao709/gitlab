@@ -2,7 +2,7 @@ import { s__ } from '~/locale';
 
 export default {
   sample: {
-    text: s__('ProjectTemplates|Sample GitLab Project'),
+    text: s__('ProjectTemplates|Sample GitRepo Project'),
     icon: '.template-option .icon-sample',
   },
   rails: {
@@ -98,7 +98,7 @@ export default {
     icon: '.template-option .icon-tencent_serverless_framework',
   },
   cluster_management: {
-    text: s__('ProjectTemplates|GitLab Cluster Management'),
+    text: s__('ProjectTemplates|GitRepo Cluster Management'),
     icon: '.template-option .icon-cluster_management',
   },
   kotlin_native_linux: {

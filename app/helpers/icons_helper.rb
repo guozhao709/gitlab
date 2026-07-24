@@ -49,7 +49,7 @@ module IconsHelper
     end
   end
 
-  # Creates a GitLab UI loading icon/spinner.
+  # Creates a GitRepo UI loading icon/spinner.
   #
   # Examples:
   #   # Default

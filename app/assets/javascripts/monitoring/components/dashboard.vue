@@ -415,7 +415,7 @@ export default {
         @dismiss="isDeprecationNoticeDismissed = true"
       >
         <gl-sprintf
-          :message="s__('Deprecations|The metrics feature was deprecated in GitLab 14.7.')"
+          :message="s__('Deprecations|The metrics feature was deprecated in GitRepo 14.7.')"
         >
           <template #epic="{ content }">
             <gl-link href="https://gitlab.com/groups/gitlab-org/-/epics/7188" target="_blank">{{

@@ -113,7 +113,7 @@ export const HIDE_APPEARING_CONTENT = {
 
 export const TOGGLE_CANARY = {
   id: 'globalShortcuts.toggleCanary',
-  description: __('Toggle GitLab Next'),
+  description: __('Toggle GitRepo Next'),
   defaultKeys: ['g x'], // eslint-disable-line @gitlab/require-i18n-strings
 };
 

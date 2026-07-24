@@ -63,7 +63,7 @@ function setSearchOptions() {
 
   if ($dashboardOptionsDataEl.length) {
     gl.dashboardOptions = {
-      name: s__('SearchAutocomplete|All GitLab'),
+      name: s__('SearchAutocomplete|All GitRepo'),
       issuesPath: $dashboardOptionsDataEl.data('issuesPath'),
       mrPath: $dashboardOptionsDataEl.data('mrPath'),
     };
@@ -274,7 +274,7 @@ export class SearchAutocomplete {
   //
   // - Search in this project
   // - Search in this group (or project's group)
-  // - Search in all GitLab
+  // - Search in all GitRepo
   scopedSearchOptions(term) {
     const icon = spriteIcon('search', 's16 inline-search-icon');
     const projectId = this.projectInputEl.val();
@@ -320,7 +320,7 @@ export class SearchAutocomplete {
     options.push({
       icon,
       text: term,
-      template: s__('SearchAutocomplete|in all GitLab'),
+      template: s__('SearchAutocomplete|in all GitRepo'),
       url: `${gon.relative_url_root}/search?search=${term}&nav_source=navbar`,
     });
 

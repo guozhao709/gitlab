@@ -31,7 +31,7 @@ export default {
   translations: {
     title: s__('UserLists|Add users'),
     description: s__(
-      'UserLists|Enter a comma separated list of user IDs. These IDs should be the users of the system in which the feature flag is set, not GitLab IDs',
+      'UserLists|Enter a comma separated list of user IDs. These IDs should be the users of the system in which the feature flag is set, not GitRepo IDs',
     ),
     userIdsLabel: s__('UserLists|User IDs'),
   },

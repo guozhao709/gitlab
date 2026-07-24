@@ -12,7 +12,7 @@ export default class WebAuthnError {
 
   message() {
     if (this.errorName === 'NotSupportedError') {
-      return __('Your device is not compatible with GitLab. Please try another device');
+      return __('Your device is not compatible with GitRepo. Please try another device');
     } else if (this.errorName === 'InvalidStateError' && this.flowType === FLOW_AUTHENTICATE) {
       return __('This device has not been registered with us.');
     } else if (this.errorName === 'InvalidStateError' && this.flowType === FLOW_REGISTER) {

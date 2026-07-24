@@ -41,17 +41,17 @@
             = link_to applications_profile_path do
               %strong.fly-out-top-item-name
                 = _('Applications')
-      = nav_link(controller: :chat_names) do
-        = link_to profile_chat_names_path do
-          .nav-icon-container
-            = sprite_icon('comment')
-          %span.nav-item-name
-            = _('Chat')
-        %ul.sidebar-sub-level-items.is-fly-out-only
-          = nav_link(controller: :chat_names, html_options: { class: "fly-out-top-item" } ) do
-            = link_to profile_chat_names_path do
-              %strong.fly-out-top-item-name
-                = _('Chat')
+      -# = nav_link(controller: :chat_names) do
+      -#   = link_to profile_chat_names_path do
+      -#     .nav-icon-container
+      -#       = sprite_icon('comment')
+      -#     %span.nav-item-name
+      -#       = _('Chat')
+      -#   %ul.sidebar-sub-level-items.is-fly-out-only
+      -#     = nav_link(controller: :chat_names, html_options: { class: "fly-out-top-item" } ) do
+      -#       = link_to profile_chat_names_path do
+      -#         %strong.fly-out-top-item-name
+      -#           = _('Chat')
       = nav_link(controller: :personal_access_tokens) do
         = link_to profile_personal_access_tokens_path do
           .nav-icon-container
@@ -108,17 +108,17 @@
             = link_to profile_keys_path do
               %strong.fly-out-top-item-name
                 = _('SSH Keys')
-      = nav_link(controller: :gpg_keys) do
-        = link_to profile_gpg_keys_path do
-          .nav-icon-container
-            = sprite_icon('key')
-          %span.nav-item-name
-            = _('GPG Keys')
-        %ul.sidebar-sub-level-items.is-fly-out-only
-          = nav_link(controller: :gpg_keys, html_options: { class: "fly-out-top-item" } ) do
-            = link_to profile_gpg_keys_path do
-              %strong.fly-out-top-item-name
-                = _('GPG Keys')
+      -# = nav_link(controller: :gpg_keys) do
+      -#   = link_to profile_gpg_keys_path do
+      -#     .nav-icon-container
+      -#       = sprite_icon('key')
+      -#     %span.nav-item-name
+      -#       = _('GPG Keys')
+      -#   %ul.sidebar-sub-level-items.is-fly-out-only
+      -#     = nav_link(controller: :gpg_keys, html_options: { class: "fly-out-top-item" } ) do
+      -#       = link_to profile_gpg_keys_path do
+      -#         %strong.fly-out-top-item-name
+      -#           = _('GPG Keys')
       = nav_link(controller: :preferences) do
         = link_to profile_preferences_path do
           .nav-icon-container

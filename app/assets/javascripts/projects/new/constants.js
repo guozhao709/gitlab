@@ -12,7 +12,7 @@ export const DEPLOYMENT_TARGET_SELECTIONS = [
   s__('DeploymentTarget|Registry (package or container)'),
   s__('DeploymentTarget|Infrastructure provider (Terraform, Cloudformation, and so on)'),
   s__('DeploymentTarget|Serverless backend (Lambda, Cloud functions)'),
-  s__('DeploymentTarget|GitLab Pages'),
+  s__('DeploymentTarget|GitRepo Pages'),
   s__('DeploymentTarget|Other hosting service'),
   s__('DeploymentTarget|No deployment planned'),
 ];

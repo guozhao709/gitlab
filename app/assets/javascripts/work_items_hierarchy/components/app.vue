@@ -59,7 +59,7 @@ export default {
     <gl-banner
       v-if="bannerVisible"
       class="gl-mt-4 gl-px-5!"
-      :title="s__('Hierarchy|Help us improve work items in GitLab!')"
+      :title="s__('Hierarchy|Help us improve work items in GitRepo!')"
       :button-text="s__('Hierarchy|Take the work items survey')"
       button-link="https://forms.gle/u1BmRp8rTbwj52iq5"
       :svg-path="illustrationPath"
@@ -68,7 +68,7 @@ export default {
       <p>
         {{
           s__(
-            'Hierarchy|Is there a framework or type of work item you wish you had access to in GitLab? Give us your feedback and help us build the experiences valuable to you.',
+            'Hierarchy|Is there a framework or type of work item you wish you had access to in GitRepo? Give us your feedback and help us build the experiences valuable to you.',
           )
         }}
       </p>

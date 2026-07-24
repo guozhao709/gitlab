@@ -13,7 +13,7 @@ export default {
   i18n: {
     title: __('Google Cloud project misconfigured'),
     description: __(
-      'GitLab and Google Cloud configuration seems to be incomplete. This probably can be fixed by your GitLab administration team. You may share these logs with them:',
+      'GitRepo and Google Cloud configuration seems to be incomplete. This probably can be fixed by your GitRepo administration team. You may share these logs with them:',
     ),
   },
 };

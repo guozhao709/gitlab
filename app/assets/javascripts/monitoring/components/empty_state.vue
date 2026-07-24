@@ -85,7 +85,7 @@ export default {
           svgPath: this.emptyUnableToConnectSvgPath,
           title: __('Unable to connect to Prometheus server'),
           description: __(
-            'Ensure connectivity is available from the GitLab server to the Prometheus server',
+            'Ensure connectivity is available from the GitRepo server to the Prometheus server',
           ),
           primaryButtonText: __('View documentation'),
           primaryButtonLink: this.documentationPath,

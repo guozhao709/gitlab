@@ -7,17 +7,17 @@ const ROCKET = String.fromCodePoint(0x1f680);
 export const logHello = () => {
   // eslint-disable-next-line no-console
   console.log(
-    `%c${s__('HelloMessage|Welcome to GitLab!')}%c
+    `%c${s__('HelloMessage|Welcome to GitRepo!')}%c
 
 ${s__(
-  'HelloMessage|Does this page need fixes or improvements? Open an issue or contribute a merge request to help make GitLab more lovable. At GitLab, everyone can contribute!',
+  'HelloMessage|Does this page need fixes or improvements? Open an issue or contribute a merge request to help make GitRepo more lovable. At GitRepo, everyone can contribute!',
 )}
 
-${sprintf(s__('HelloMessage|%{handshake_emoji} Contribute to GitLab: %{contribute_link}'), {
+${sprintf(s__('HelloMessage|%{handshake_emoji} Contribute to GitRepo: %{contribute_link}'), {
   handshake_emoji: `${HANDSHAKE}`,
   contribute_link: 'https://about.gitlab.com/community/contribute/',
 })}
-${sprintf(s__('HelloMessage|%{magnifier_emoji} Create a new GitLab issue: %{new_issue_link}'), {
+${sprintf(s__('HelloMessage|%{magnifier_emoji} Create a new GitRepo issue: %{new_issue_link}'), {
   magnifier_emoji: `${MAG}`,
   new_issue_link: 'https://gitlab.com/gitlab-org/gitlab/-/issues/new',
 })}
@@ -25,7 +25,7 @@ ${
   window.gon?.dot_com
     ? `${sprintf(
         s__(
-          'HelloMessage|%{rocket_emoji} We like your curiosity! Help us improve GitLab by joining the team: %{jobs_page_link}',
+          'HelloMessage|%{rocket_emoji} We like your curiosity! Help us improve GitRepo by joining the team: %{jobs_page_link}',
         ),
         { rocket_emoji: `${ROCKET}`, jobs_page_link: 'https://about.gitlab.com/jobs/' },
       )}`

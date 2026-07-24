@@ -20,14 +20,14 @@ import {
 
 export const i18n = {
   columns: {
-    gitlabKeyTitle: s__('AlertMappingBuilder|GitLab alert key'),
+    gitlabKeyTitle: s__('AlertMappingBuilder|GitRepo alert key'),
     payloadKeyTitle: s__('AlertMappingBuilder|Payload alert key'),
     fallbackKeyTitle: s__('AlertMappingBuilder|Define fallback'),
   },
   selectMappingKey: s__('AlertMappingBuilder|Select key'),
   makeSelection: s__('AlertMappingBuilder|Make selection'),
   fallbackTooltip: s__(
-    'AlertMappingBuilder|Title is a required field for alerts in GitLab. Should the payload field you specified not be available, specifiy which field we should use instead. ',
+    'AlertMappingBuilder|Title is a required field for alerts in GitRepo. Should the payload field you specified not be available, specifiy which field we should use instead. ',
   ),
   noResults: __('No matching results'),
 };

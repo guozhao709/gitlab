@@ -27,7 +27,7 @@ export default {
 
 <template>
   <div>
-    <h2 class="gl-text-center gl-mb-7">{{ s__('JiraService|GitLab for Jira Configuration') }}</h2>
+    <h2 class="gl-text-center gl-mb-7">{{ s__('JiraService|GitRepo for Jira Configuration') }}</h2>
 
     <gl-loading-icon v-if="subscriptionsLoading" size="md" />
     <div v-else-if="hasSubscriptions && !subscriptionsError">
@@ -42,7 +42,7 @@ export default {
       :title="s__('Integrations|No linked namespaces')"
       :description="
         s__(
-          'Integrations|Namespaces are the GitLab groups and subgroups you link to this Jira instance.',
+          'Integrations|Namespaces are the GitRepo groups and subgroups you link to this Jira instance.',
         )
       "
     >

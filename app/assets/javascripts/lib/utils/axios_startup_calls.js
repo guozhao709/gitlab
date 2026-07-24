@@ -3,10 +3,10 @@ import { mergeUrlParams } from './url_utility';
 
 // We should probably not couple this utility to `gon.gitlab_url`
 // Also, this would replace occurrences that aren't at the beginning of the string
-const removeGitLabUrl = (url) => url.replace(gon.gitlab_url, '');
+const removeGitRepoUrl = (url) => url.replace(gon.gitlab_url, '');
 
 const getFullUrl = (req) => {
-  const url = removeGitLabUrl(req.url);
+  const url = removeGitRepoUrl(req.url);
   return mergeUrlParams(req.params || {}, url, { sort: true });
 };
 

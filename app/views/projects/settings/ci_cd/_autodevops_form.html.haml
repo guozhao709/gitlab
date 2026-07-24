@@ -25,12 +25,12 @@
                   checkbox_options: { class: 'js-toggle-extra-settings', checked: auto_devops_enabled, data: { qa_selector: 'enable_autodevops_checkbox' } },
                   help_text: (s_('CICD|The Auto DevOps pipeline runs if no alternative CI configuration file is found.') + ' ' + autodevops_help_link).html_safe
               .card-footer.js-extra-settings{ class: auto_devops_enabled || 'hidden' }
-                - if @project.all_clusters.empty?
-                  %p.settings-message.text-center
-                    = s_('CICD|Add a %{kubernetes_cluster_link_start}Kubernetes cluster integration%{link_end} with a domain, or create an AUTO_DEVOPS_PLATFORM_TARGET CI variable.').html_safe % { kubernetes_cluster_link_start: kubernetes_cluster_link_start, link_end: link_end }
-                - elsif !has_base_domain
-                  %p.settings-message.text-center
-                    = s_('CICD|Add a %{base_domain_link_start}base domain%{link_end} to your %{kubernetes_cluster_link_start}Kubernetes cluster%{link_end} for your deployment strategy to work.').html_safe % { base_domain_link_start: base_domain_link_start, kubernetes_cluster_link_start: kubernetes_cluster_link_start, link_end: link_end }
+                -# - if @project.all_clusters.empty?
+                -#   %p.settings-message.text-center
+                -#     = s_('CICD|Add a %{kubernetes_cluster_link_start}Kubernetes cluster integration%{link_end} with a domain, or create an AUTO_DEVOPS_PLATFORM_TARGET CI variable.').html_safe % { kubernetes_cluster_link_start: kubernetes_cluster_link_start, link_end: link_end }
+                -# - elsif !has_base_domain
+                -#   %p.settings-message.text-center
+                -#     = s_('CICD|Add a %{base_domain_link_start}base domain%{link_end} to your %{kubernetes_cluster_link_start}Kubernetes cluster%{link_end} for your deployment strategy to work.').html_safe % { base_domain_link_start: base_domain_link_start, kubernetes_cluster_link_start: kubernetes_cluster_link_start, link_end: link_end }
                 %label.gl-mt-3
                   %strong= s_('CICD|Deployment strategy')
                 .form-check

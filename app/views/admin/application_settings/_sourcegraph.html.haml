@@ -10,7 +10,7 @@
     %p
       - link_start = '<a href="%{url}" target="_blank" rel="noopener noreferrer">'.html_safe % { url: 'https://sourcegraph.com/' }
       - link_end = "#{sprite_icon('external-link', size: 12, css_class: 'ml-1 vertical-align-center')}</a>".html_safe
-      = s_('SourcegraphAdmin|Enable code intelligence powered by %{link_start}Sourcegraph%{link_end} on your GitLab instance\'s code views and merge requests.').html_safe % { link_start: link_start, link_end: link_end }
+      = s_('SourcegraphAdmin|Enable code intelligence powered by %{link_start}Sourcegraph%{link_end} on your GitRepo instance\'s code views and merge requests.').html_safe % { link_start: link_start, link_end: link_end }
       %span
         = link_to s_('SourcegraphAdmin|Learn more.'), help_page_path('integration/sourcegraph.md'), target: '_blank', rel: 'noopener noreferrer'
 
@@ -28,5 +28,5 @@
           = f.label :sourcegraph_url, s_('SourcegraphAdmin|Sourcegraph URL'), class: 'label-bold'
           = f.text_field :sourcegraph_url, class: 'form-control gl-form-input', placeholder: s_('SourcegraphAdmin|https://sourcegraph.example.com')
           .form-text.text-muted
-            = s_('SourcegraphAdmin|Configure the URL to a Sourcegraph instance which can read your GitLab projects.')
+            = s_('SourcegraphAdmin|Configure the URL to a Sourcegraph instance which can read your GitRepo projects.')
       = f.submit s_('SourcegraphAdmin|Save changes'), class: 'gl-button btn btn-confirm'

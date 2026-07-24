@@ -17,7 +17,7 @@ import CommitForm from './commit_form.vue';
 
 export default {
   alertTexts: {
-    [COMMIT_FAILURE]: s__('Pipelines|The GitLab CI configuration could not be updated.'),
+    [COMMIT_FAILURE]: s__('Pipelines|The GitRepo CI configuration could not be updated.'),
     [COMMIT_SUCCESS]: __('Your changes have been successfully committed.'),
   },
   i18n: {

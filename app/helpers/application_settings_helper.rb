@@ -141,7 +141,7 @@ module ApplicationSettingsHelper
   end
 
   def external_authorization_timeout_help_text
-    s_("ExternalAuthorization|Period GitLab waits for a response from the external "\
+    s_("ExternalAuthorization|Period GitRepo waits for a response from the external "\
         "service. If there is no response, access is denied. Default: 0.5 seconds.")
   end
 

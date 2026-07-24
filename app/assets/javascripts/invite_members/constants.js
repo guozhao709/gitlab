@@ -20,7 +20,7 @@ export const TRIGGER_ELEMENT_BUTTON = 'button';
 export const TRIGGER_ELEMENT_SIDE_NAV = 'side-nav';
 export const MEMBERS_MODAL_DEFAULT_TITLE = s__('InviteMembersModal|Invite members');
 export const MEMBERS_MODAL_CELEBRATE_TITLE = s__(
-  'InviteMembersModal|GitLab is better with colleagues!',
+  'InviteMembersModal|GitRepo is better with colleagues!',
 );
 export const MEMBERS_MODAL_CELEBRATE_INTRO = s__(
   'InviteMembersModal|How about inviting a colleague or two to join you?',

@@ -26,7 +26,7 @@ export default {
   },
   i18n: {
     signInButtonTextWithSubscriptions: s__('Integrations|Sign in to add namespaces'),
-    signInText: s__('JiraService|Sign in to GitLab.com to get started.'),
+    signInText: s__('JiraService|Sign in to GitRepo.com to get started.'),
   },
   methods: {
     onSignInError() {
@@ -38,7 +38,7 @@ export default {
 
 <template>
   <div>
-    <h2 class="gl-text-center gl-mb-7">{{ s__('JiraService|GitLab for Jira Configuration') }}</h2>
+    <h2 class="gl-text-center gl-mb-7">{{ s__('JiraService|GitRepo for Jira Configuration') }}</h2>
     <div v-if="hasSubscriptions">
       <div class="gl-display-flex gl-justify-content-end gl-mb-3">
         <sign-in-oauth-button

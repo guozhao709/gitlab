@@ -2,11 +2,11 @@ import { isEqual } from 'lodash';
 import { capitalizeFirstCharacter } from '~/lib/utils/text_utility';
 
 /**
- * Given data for GitLab alert fields, parsed payload fields data and previously stored mapping (if any)
+ * Given data for GitRepo alert fields, parsed payload fields data and previously stored mapping (if any)
  * creates an object in a form convenient to build UI && interact with it
- * @param {Object} gitlabFields  - structure describing GitLab alert fields
+ * @param {Object} gitlabFields  - structure describing GitRepo alert fields
  * @param {Object} payloadFields - parsed from sample JSON sample alert fields
- * @param {Object} savedMapping  - GitLab fields to parsed fields mapping
+ * @param {Object} savedMapping  - GitRepo fields to parsed fields mapping
  *
  * @return {Object} mapping data for UI mapping builder
  */
@@ -56,7 +56,7 @@ export const setFieldsLabels = (fields) => {
 };
 /**
  * Based on mapping data configured by the user creates an object in a format suitable for save on BE
- * @param {Object} mappingData  - structure describing mapping between GitLab fields and parsed payload fields
+ * @param {Object} mappingData  - structure describing mapping between GitRepo fields and parsed payload fields
  *
  * @return {Object} mapping data  to send to BE
  */

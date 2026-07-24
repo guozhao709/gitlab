@@ -147,7 +147,7 @@ export const linkTypes = {
 };
 
 /**
- * These are the supported values for the GitLab-UI
+ * These are the supported values for the GitRepo-UI
  * chart legend layout.
  *
  * Currently defined in
@@ -220,7 +220,7 @@ export const annotationsSymbolIcon = 'path://m5 229 5 8h-10z';
 export const OVERVIEW_DASHBOARD_PATH = 'config/prometheus/common_metrics.yml';
 
 /**
- * GitLab provide metrics dashboards that are available to a user once
+ * GitRepo provide metrics dashboards that are available to a user once
  * the Prometheus managed app has been installed, without any extra setup
  * required. These "out of the box" dashboards are defined under the
  * `config/prometheus` path.

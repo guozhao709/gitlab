@@ -9,14 +9,14 @@ module Sidebars
           return false unless can?(context.current_user, :admin_project, context.project)
 
           add_item(general_menu_item)
-          add_item(integrations_menu_item)
-          add_item(webhooks_menu_item)
+          # add_item(integrations_menu_item)
+          # add_item(webhooks_menu_item)
           add_item(access_tokens_menu_item)
           add_item(repository_menu_item)
           add_item(ci_cd_menu_item)
           add_item(packages_and_registries_menu_item)
-          add_item(pages_menu_item)
-          add_item(monitor_menu_item)
+          # add_item(pages_menu_item)
+          # add_item(monitor_menu_item)
           add_item(usage_quotas_menu_item)
 
           true

@@ -6,7 +6,7 @@ export default {
   i18n: {
     title: s__('Jobs|Use jobs to automate your tasks'),
     description: s__(
-      'Jobs|Jobs are the building blocks of a GitLab CI/CD pipeline. Each job has a specific task, like testing code. To set up jobs in a CI/CD pipeline, add a CI/CD configuration file to your project.',
+      'Jobs|Jobs are the building blocks of a GitRepo CI/CD pipeline. Each job has a specific task, like testing code. To set up jobs in a CI/CD pipeline, add a CI/CD configuration file to your project.',
     ),
     buttonText: s__('Jobs|Create CI/CD configuration file'),
   },

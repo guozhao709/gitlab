@@ -56,9 +56,9 @@ export default {
     this.signInURL = await getGitlabSignInURL(this.usersPath);
   },
   i18n: {
-    signInText: __('Sign in to GitLab'),
-    signedInAsUserText: __('Signed in to GitLab as %{user_link}'),
-    signedInText: __('Signed in to GitLab'),
+    signInText: __('Sign in to GitRepo'),
+    signedInAsUserText: __('Signed in to GitRepo as %{user_link}'),
+    signedInText: __('Signed in to GitRepo'),
   },
 };
 </script>

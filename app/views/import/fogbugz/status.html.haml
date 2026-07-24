@@ -6,6 +6,6 @@
 
 %p.light
   - link_to_customize = link_to('customize', new_user_map_import_fogbugz_path)
-  = _('Optionally, you can %{link_to_customize} how FogBugz email addresses and usernames are imported into GitLab.').html_safe % { link_to_customize: link_to_customize }
+  = _('Optionally, you can %{link_to_customize} how FogBugz email addresses and usernames are imported into GitRepo.').html_safe % { link_to_customize: link_to_customize }
 %hr
 = render 'import/githubish_status', provider: 'fogbugz', filterable: false

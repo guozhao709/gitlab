@@ -26,7 +26,7 @@ module PageLayoutHelper
   #
   # Examples:
   #
-  #   page_description # => "GitLab Community Edition"
+  #   page_description # => "GitRepo Community Edition"
   #   page_description("Foo")
   #   page_description # => "Foo"
   #

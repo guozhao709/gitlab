@@ -13,7 +13,7 @@ export default {
       'PipelineEditorTutorial|View %{linkStart}.gitlab-ci.yml syntax reference%{linkEnd}',
     ),
     learnMore: s__(
-      'PipelineEditorTutorial|Learn more about %{linkStart}GitLab CI/CD concepts%{linkEnd}',
+      'PipelineEditorTutorial|Learn more about %{linkStart}GitRepo CI/CD concepts%{linkEnd}',
     ),
     needs: s__(
       'PipelineEditorTutorial|Make your pipeline more efficient with the %{linkStart}Needs keyword%{linkEnd}',

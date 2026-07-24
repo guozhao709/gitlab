@@ -1,4 +1,4 @@
-const DEFAULT_TITLE = '· GitLab';
+const DEFAULT_TITLE = '· GitRepo';
 
 export const setTitle = (pathMatch, ref, project) => {
   if (!pathMatch) {

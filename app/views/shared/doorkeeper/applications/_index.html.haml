@@ -7,9 +7,9 @@
     %p
       - if oauth_applications_enabled
         - if oauth_authorized_applications_enabled
-          = _("Manage applications that can use GitLab as an OAuth provider, and applications that you've authorized to use your account.")
+          = _("Manage applications that can use GitRepo as an OAuth provider, and applications that you've authorized to use your account.")
         - else
-          = _("Manage applications that use GitLab as an OAuth provider.")
+          = _("Manage applications that use GitRepo as an OAuth provider.")
       - else
         = _("Manage applications that you've authorized to use your account.")
   .col-lg-8
@@ -20,7 +20,7 @@
       %hr
     - else
       .bs-callout.bs-callout-disabled
-        = _('Adding new applications is disabled in your GitLab instance. Please contact your GitLab administrator to get the permission')
+        = _('Adding new applications is disabled in your GitRepo instance. Please contact your GitRepo administrator to get the permission')
     - if oauth_applications_enabled
       .oauth-applications
         %h5

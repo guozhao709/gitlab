@@ -292,7 +292,7 @@ export default {
           <gl-sprintf
             :message="
               s__(
-                'ApplicationSettings|See GitLab\'s %{linkStart}Password Policy Guidelines%{linkEnd}.',
+                'ApplicationSettings|See GitRepo\'s %{linkStart}Password Policy Guidelines%{linkEnd}.',
               )
             "
           >

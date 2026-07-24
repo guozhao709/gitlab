@@ -6,7 +6,7 @@ import { __ } from '~/locale';
 export default {
   name: 'HeaderSearchDefaultItems',
   i18n: {
-    allGitLab: __('All GitLab'),
+    allGitRepo: __('All GitRepo'),
   },
   components: {
     GlDropdownSectionHeader,
@@ -26,7 +26,7 @@ export default {
       return (
         this.searchContext?.project?.name ||
         this.searchContext?.group?.name ||
-        this.$options.i18n.allGitLab
+        this.$options.i18n.allGitRepo
       );
     },
   },

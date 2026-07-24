@@ -26,10 +26,10 @@ export default {
   },
   computed: {
     nugetInstallationCommand() {
-      return `nuget install ${this.packageEntity.name} -Source "GitLab"`;
+      return `nuget install ${this.packageEntity.name} -Source "GitRepo"`;
     },
     nugetSetupCommand() {
-      return `nuget source Add -Name "GitLab" -Source "${this.packageEntity.nugetUrl}" -UserName <your_username> -Password <your_token>`;
+      return `nuget source Add -Name "GitRepo" -Source "${this.packageEntity.nugetUrl}" -UserName <your_username> -Password <your_token>`;
     },
   },
   tracking: {

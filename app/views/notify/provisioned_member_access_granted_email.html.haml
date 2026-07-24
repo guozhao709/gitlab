@@ -4,13 +4,13 @@
 %tr
   %td.text-content
     %p
-      = _('An Enterprise User GitLab account has been created for you by your organization:')
+      = _('An Enterprise User GitRepo account has been created for you by your organization:')
     %p
       = _('Username: %{username}') % { username: @user.username }
       %br
       = _('Email: %{email}') % { email: @user.email }
       %br
-      = _('GitLab group: %{source_link}').html_safe % { source_link: source_link }
+      = _('GitRepo group: %{source_link}').html_safe % { source_link: source_link }
 
 %tr
   %td.text-content

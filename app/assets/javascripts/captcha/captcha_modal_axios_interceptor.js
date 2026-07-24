@@ -24,8 +24,8 @@ const showCaptchaModalAndResubmit = async (axios, data, errConfig) => {
     url: errConfig.url,
     headers: {
       ...originalHeaders,
-      'X-GitLab-Captcha-Response': captchaResponse,
-      'X-GitLab-Spam-Log-Id': data.spam_log_id,
+      'X-GitRepo-Captcha-Response': captchaResponse,
+      'X-GitRepo-Spam-Log-Id': data.spam_log_id,
     },
     data: originalData,
   });

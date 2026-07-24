@@ -211,10 +211,10 @@ module GroupsHelper
   def localized_jobs_to_be_done_choices
     {
       basics: _('I want to learn the basics of Git'),
-      move_repository: _('I want to move my repository to GitLab from somewhere else'),
+      move_repository: _('I want to move my repository to GitRepo from somewhere else'),
       code_storage: _('I want to store my code'),
-      exploring: _('I want to explore GitLab to see if it’s worth switching to'),
-      ci: _('I want to use GitLab CI with my existing repository'),
+      exploring: _('I want to explore GitRepo to see if it’s worth switching to'),
+      ci: _('I want to use GitRepo CI with my existing repository'),
       other: _('A different reason')
     }.with_indifferent_access.freeze
   end

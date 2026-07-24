@@ -42,7 +42,7 @@ import Text from './nodes/text';
 import Video from './nodes/video';
 
 // The filters referenced in lib/banzai/pipeline/gfm_pipeline.rb transform
-// GitLab Flavored Markdown (GFM) to HTML.
+// GitRepo Flavored Markdown (GFM) to HTML.
 // The nodes and marks referenced here transform that same HTML to GFM to be copied to the clipboard.
 // Every filter in lib/banzai/pipeline/gfm_pipeline.rb that generates HTML
 // from GFM should have a node or mark here.

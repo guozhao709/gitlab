@@ -9,7 +9,7 @@
 
   - if ssh_info.blank?
     %p
-      = html_escape(_('SSH host keys are not available on this system. Please use %{ssh_keyscan} command or contact your GitLab administrator for more information.')) % { ssh_keyscan: tag.code('ssh-keyscan') }
+      = html_escape(_('SSH host keys are not available on this system. Please use %{ssh_keyscan} command or contact your GitRepo administrator for more information.')) % { ssh_keyscan: tag.code('ssh-keyscan') }
   - else
     %p
       = _('Below are the fingerprints for the current instance SSH host keys.')

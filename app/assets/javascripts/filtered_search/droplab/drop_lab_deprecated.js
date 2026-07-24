@@ -1,6 +1,6 @@
 /**
  * This library is deprecated and scheduled to be removed once the
- * filtered_search component is replaced with GitLab's new Pajamas
+ * filtered_search component is replaced with GitRepo's new Pajamas
  * filter vue component.
  *
  * The documentation has been removed from the gitlab codebase but

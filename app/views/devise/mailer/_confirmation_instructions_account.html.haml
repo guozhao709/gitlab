@@ -8,7 +8,7 @@
 - else
   #content
     - if Gitlab.com?
-      = email_default_heading(_('Thanks for signing up to GitLab!'))
+      = email_default_heading(_('Thanks for signing up to GitRepo!'))
     - else
       = email_default_heading(_("Welcome, %{name}!") % { name: @resource.name })
     %p= _("To get started, click the link below to confirm your account.")

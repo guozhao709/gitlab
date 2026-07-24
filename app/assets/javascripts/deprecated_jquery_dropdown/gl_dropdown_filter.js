@@ -9,7 +9,7 @@ const BLUR_KEYCODES = [27, 40];
 
 const HAS_VALUE_CLASS = 'has-value';
 
-export class GitLabDropdownFilter {
+export class GitRepoDropdownFilter {
   constructor(input, options) {
     let ref;
     this.input = input;

@@ -38,10 +38,10 @@ export default {
     },
   },
   i18n: {
-    title: s__('JiraService|Welcome to GitLab for Jira'),
-    signInSubtitle: s__('JiraService|Sign in to GitLab to link namespaces.'),
-    versionSelectSubtitle: s__('JiraService|What version of GitLab are you using?'),
-    changeVersionButtonText: s__('JiraService|Change GitLab version'),
+    title: s__('JiraService|Welcome to GitRepo for Jira'),
+    signInSubtitle: s__('JiraService|Sign in to GitRepo to link namespaces.'),
+    versionSelectSubtitle: s__('JiraService|What version of GitRepo are you using?'),
+    changeVersionButtonText: s__('JiraService|Change GitRepo version'),
   },
 };
 </script>

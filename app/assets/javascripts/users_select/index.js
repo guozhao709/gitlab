@@ -259,8 +259,8 @@ function UsersSelect(currentUser, els, options = {}) {
       showMenuAbove,
       data(term, callback) {
         return userSelect.users(term, options, (users) => {
-          // GitLabDropdownFilter returns this.instance
-          // GitLabDropdownRemote returns this.options.instance
+          // GitRepoDropdownFilter returns this.instance
+          // GitRepoDropdownRemote returns this.options.instance
           const deprecatedJQueryDropdown = this.instance || this.options.instance;
           deprecatedJQueryDropdown.options.processData(term, users, callback);
         });

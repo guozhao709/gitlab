@@ -4,9 +4,9 @@ import $ from 'jquery';
 import { escape } from 'lodash';
 import { isObject } from '~/lib/utils/type_utility';
 import { visitUrl } from '~/lib/utils/url_utility';
-import { GitLabDropdownFilter } from './gl_dropdown_filter';
-import { GitLabDropdownInput } from './gl_dropdown_input';
-import { GitLabDropdownRemote } from './gl_dropdown_remote';
+import { GitRepoDropdownFilter } from './gl_dropdown_filter';
+import { GitRepoDropdownInput } from './gl_dropdown_input';
+import { GitRepoDropdownRemote } from './gl_dropdown_remote';
 import renderItem from './render';
 
 const LOADING_CLASS = 'is-loading';
@@ -49,7 +49,7 @@ function addGlobalMouseEventListeners() {
   });
 }
 
-export class GitLabDropdown {
+export class GitRepoDropdown {
   constructor(el1, options) {
     let selector;
     let self;
@@ -90,7 +90,7 @@ export class GitLabDropdown {
         this.parseData(this.options.data);
         this.focusTextInput();
       } else {
-        this.remote = new GitLabDropdownRemote(this.options.data, {
+        this.remote = new GitRepoDropdownRemote(this.options.data, {
           dataType: this.options.dataType,
           beforeSend: this.toggleLoading.bind(this),
           success: (data) => {
@@ -116,12 +116,12 @@ export class GitLabDropdown {
       }
     }
     if (this.noFilterInput.length) {
-      this.plainInput = new GitLabDropdownInput(this.noFilterInput, this.options);
+      this.plainInput = new GitRepoDropdownInput(this.noFilterInput, this.options);
       this.plainInput.onInput(this.addInput.bind(this));
     }
     // Init filterable
     if (this.options.filterable) {
-      this.filter = new GitLabDropdownFilter(this.filterInput, {
+      this.filter = new GitRepoDropdownFilter(this.filterInput, {
         elIsInput: $(this.el).is('input'),
         filterInputBlur: this.filterInputBlur,
         filterByText: this.options.filterByText,

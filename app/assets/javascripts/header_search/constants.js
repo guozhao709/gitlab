@@ -10,7 +10,7 @@ export const MSG_MR_IM_REVIEWER = s__("GlobalSearch|Merge requests that I'm a re
 
 export const MSG_MR_IVE_CREATED = s__("GlobalSearch|Merge requests I've created");
 
-export const MSG_IN_ALL_GITLAB = s__('GlobalSearch|in all GitLab');
+export const MSG_IN_ALL_GITLAB = s__('GlobalSearch|in all GitRepo');
 
 export const MSG_IN_GROUP = s__('GlobalSearch|in group');
 

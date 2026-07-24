@@ -37,13 +37,13 @@ class ProjectPresenter < Gitlab::View::Presenter::Delegated
   def statistics_buttons(show_auto_devops_callout:)
     [
       readme_anchor_data,
-      license_anchor_data,
+      # license_anchor_data,
       changelog_anchor_data,
       contribution_guide_anchor_data,
       autodevops_anchor_data(show_auto_devops_callout: show_auto_devops_callout),
-      kubernetes_cluster_anchor_data,
+      # kubernetes_cluster_anchor_data,
       gitlab_ci_anchor_data,
-      integrations_anchor_data
+      # integrations_anchor_data
     ].compact.reject(&:is_link).sort_by.with_index { |item, idx| [item.class_modifier ? 0 : 1, idx] }
   end
 
@@ -56,11 +56,11 @@ class ProjectPresenter < Gitlab::View::Presenter::Delegated
       upload_anchor_data,
       new_file_anchor_data,
       readme_anchor_data,
-      license_anchor_data,
+      # license_anchor_data,
       changelog_anchor_data,
       contribution_guide_anchor_data,
       gitlab_ci_anchor_data,
-      integrations_anchor_data
+      # integrations_anchor_data
     ].compact.reject { |item| item.is_link }
   end
 

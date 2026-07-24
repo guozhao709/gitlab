@@ -365,7 +365,7 @@ module ApplicationHelper
   def read_only_message
     return unless Gitlab::Database.read_only?
 
-    _('You are on a read-only GitLab instance.')
+    _('You are on a read-only GitRepo instance.')
   end
 
   def client_class_list

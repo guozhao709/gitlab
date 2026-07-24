@@ -43,7 +43,7 @@ export default {
         <gl-sprintf
           :message="
             __(
-              'One or more of your %{provider} projects cannot be imported into GitLab directly because they use Subversion or Mercurial for version control, rather than Git.',
+              'One or more of your %{provider} projects cannot be imported into GitRepo directly because they use Subversion or Mercurial for version control, rather than Git.',
             )
           "
         >

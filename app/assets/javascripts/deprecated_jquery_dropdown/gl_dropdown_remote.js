@@ -2,7 +2,7 @@
 
 import axios from '../lib/utils/axios_utils';
 
-export class GitLabDropdownRemote {
+export class GitRepoDropdownRemote {
   constructor(dataEndpoint, options) {
     this.dataEndpoint = dataEndpoint;
     this.options = options;

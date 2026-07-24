@@ -8,7 +8,7 @@ const splitButtonActionItems = [
   {
     title: s__('ClusterIntegration|Remove integration and resources'),
     description: s__(
-      'ClusterIntegration|Deletes all GitLab resources attached to this cluster during removal',
+      'ClusterIntegration|Deletes all GitRepo resources attached to this cluster during removal',
     ),
     eventName: 'remove-cluster-and-cleanup',
   },
@@ -62,7 +62,7 @@ export default {
     warningMessage() {
       return this.confirmCleanup
         ? s__(
-            'ClusterIntegration|You are about to remove your cluster integration and all GitLab-created resources associated with this cluster.',
+            'ClusterIntegration|You are about to remove your cluster integration and all GitRepo-created resources associated with this cluster.',
           )
         : s__('ClusterIntegration|You are about to remove your cluster integration.');
     },
@@ -155,7 +155,7 @@ export default {
       </form>
       <span v-if="confirmCleanup">{{
         s__(
-          'ClusterIntegration|If you do not wish to delete all associated GitLab resources, you can simply remove the integration.',
+          'ClusterIntegration|If you do not wish to delete all associated GitRepo resources, you can simply remove the integration.',
         )
       }}</span>
       <template #modal-footer>

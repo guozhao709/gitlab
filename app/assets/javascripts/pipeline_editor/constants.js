@@ -72,19 +72,19 @@ export const RUNNERS_SETTINGS_LINK_CLICKED_EVENT = 'runners_settings_link_clicke
 export const RUNNERS_DOCUMENTATION_LINK_CLICKED_EVENT = 'runners_documentation_link_clicked';
 export const RUNNERS_SETTINGS_BUTTON_CLICKED_EVENT = 'runners_settings_button_clicked';
 export const I18N = {
-  title: s__('Pipelines|Get started with GitLab CI/CD'),
+  title: s__('Pipelines|Get started with GitRepo CI/CD'),
   runners: {
     title: s__('Pipelines|Runners are available to run your jobs now'),
     subtitle: s__(
-      'Pipelines|GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline. There are active runners available to run your jobs right now. If you prefer, you can %{settingsLinkStart}configure your runners%{settingsLinkEnd} or %{docsLinkStart}learn more%{docsLinkEnd} about runners.',
+      'Pipelines|GitRepo Runner is an application that works with GitRepo CI/CD to run jobs in a pipeline. There are active runners available to run your jobs right now. If you prefer, you can %{settingsLinkStart}configure your runners%{settingsLinkEnd} or %{docsLinkStart}learn more%{docsLinkEnd} about runners.',
     ),
   },
   noRunners: {
     title: s__('Pipelines|No runners detected'),
     subtitle: s__(
-      'Pipelines|A GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline. Install GitLab Runner and register your own runners to get started with CI/CD.',
+      'Pipelines|A GitRepo Runner is an application that works with GitRepo CI/CD to run jobs in a pipeline. Install GitRepo Runner and register your own runners to get started with CI/CD.',
     ),
-    cta: s__('Pipelines|Install GitLab Runner'),
+    cta: s__('Pipelines|Install GitRepo Runner'),
   },
   learnBasics: {
     title: s__('Pipelines|Learn the basics of pipelines and .yml files'),
@@ -92,9 +92,9 @@ export const I18N = {
       'Pipelines|Use a sample %{codeStart}.gitlab-ci.yml%{codeEnd} template file to explore how CI/CD works.',
     ),
     gettingStarted: {
-      title: s__('Pipelines|"Hello world" with GitLab CI'),
+      title: s__('Pipelines|"Hello world" with GitRepo CI'),
       description: s__(
-        'Pipelines|Get familiar with GitLab CI syntax by  setting up a simple pipeline running a  "Hello world" script to see how it runs, explore how CI/CD works.',
+        'Pipelines|Get familiar with GitRepo CI syntax by  setting up a simple pipeline running a  "Hello world" script to see how it runs, explore how CI/CD works.',
       ),
       cta: s__('Pipelines|Try test template'),
     },
@@ -102,7 +102,7 @@ export const I18N = {
   templates: {
     title: s__('Pipelines|Ready to set up CI/CD for your project?'),
     subtitle: s__(
-      "Pipelines|Use a template based on your project's language or framework to get started with GitLab CI/CD.",
+      "Pipelines|Use a template based on your project's language or framework to get started with GitRepo CI/CD.",
     ),
   },
 };
