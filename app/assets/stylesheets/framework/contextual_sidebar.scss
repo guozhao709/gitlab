@@ -473,3 +473,111 @@
   }
 }
 
+//
+// DARK SIDEBAR OVERRIDE
+//
+
+$dark-sidebar-bg: #1e1e2e;
+$dark-sidebar-text: #e8e8f0;
+$dark-sidebar-hover: rgba(255, 255, 255, 0.05);
+$dark-sidebar-active: rgba(255, 255, 255, 0.08);
+
+.nav-sidebar {
+  background-color: $dark-sidebar-bg !important;
+
+  a {
+    color: $dark-sidebar-text !important;
+  }
+
+  .nav-item-name {
+    color: $dark-sidebar-text !important;
+  }
+
+  li {
+    > a,
+    > .fly-out-top-item-container {
+      color: $dark-sidebar-text !important;
+
+      &:hover {
+        background-color: $dark-sidebar-hover !important;
+      }
+    }
+
+    &.active {
+      &:not(.fly-out-top-item) {
+        > a:not(.has-sub-items) {
+          background-color: $dark-sidebar-active !important;
+        }
+      }
+    }
+  }
+
+  .nav-icon-container svg {
+    fill: $dark-sidebar-text !important;
+  }
+
+  .sidebar-context-title {
+    color: $dark-sidebar-text !important;
+  }
+}
+
+.sidebar-top-level-items {
+  li > a.gl-link {
+    color: $dark-sidebar-text !important;
+  }
+}
+
+.toggle-sidebar-button,
+.close-nav-button {
+  background-color: $dark-sidebar-bg !important;
+
+  .collapse-text,
+  .icon-chevron-double-lg-left,
+  .icon-chevron-double-lg-right {
+    color: $dark-sidebar-text !important;
+  }
+}
+
+.sidebar-collapsed-desktop {
+  li.active:not(.fly-out-top-item) > a {
+    background-color: $dark-sidebar-active !important;
+  }
+}
+
+.sidebar-sub-level-items {
+  background-color: lighten($dark-sidebar-bg, 5%) !important;
+
+  a {
+    color: $dark-sidebar-text !important;
+  }
+
+  .fly-out-top-item a,
+  .fly-out-top-item .fly-out-top-item-container {
+    color: $dark-sidebar-text !important;
+  }
+}
+
+.fly-out-top-item a,
+.fly-out-top-item.active a,
+.fly-out-top-item .fly-out-top-item-container {
+  background: $dark-sidebar-bg !important;
+}
+
+.nav-sidebar-inner-scroll {
+  > div.context-header {
+    a {
+      color: $dark-sidebar-text !important;
+
+      &:hover {
+        background-color: $dark-sidebar-hover !important;
+      }
+    }
+  }
+}
+
+.sidebar-top-level-items > li > a.has-sub-items + .sidebar-sub-level-items {
+  @include media-breakpoint-up(sm) {
+    background-color: lighten($dark-sidebar-bg, 5%) !important;
+  }
+}
+
