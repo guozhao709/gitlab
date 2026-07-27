@@ -21,7 +21,7 @@ module Sidebars
         add_menu(Sidebars::Projects::Menus::ProjectInformationMenu.new(context))
         add_menu(Sidebars::Projects::Menus::LearnGitlabMenu.new(context))
         add_menu(Sidebars::Projects::Menus::RepositoryMenu.new(context))
-        # add_menu(Sidebars::Projects::Menus::IssuesMenu.new(context))
+        add_menu(Sidebars::Projects::Menus::IssuesMenu.new(context))
         add_menu(Sidebars::Projects::Menus::ExternalIssueTrackerMenu.new(context))
         add_menu(Sidebars::Projects::Menus::ZentaoMenu.new(context))
         add_menu(Sidebars::Projects::Menus::MergeRequestsMenu.new(context))

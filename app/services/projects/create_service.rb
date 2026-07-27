@@ -128,6 +128,7 @@ module Projects
       Projects::PostCreationWorker.perform_async(@project.id)
 
       create_readme if @initialize_with_readme
+      create_develop_branch if @initialize_with_readme
       create_sast_commit if @initialize_with_sast
     end
 
@@ -180,6 +181,15 @@ module Projects
       }
 
       Files::CreateService.new(@project, current_user, commit_attrs).execute
+    end
+
+    def create_develop_branch
+      default_branch = @default_branch.presence || @project.default_branch_or_main
+      # 在当前默认分支的基础上创建 develop 分支
+      ::Branches::CreateService.new(@project, current_user)
+        .execute('develop', default_branch)
+    rescue StandardError => e
+      Gitlab::ErrorTracking.track_exception(e) if defined?(Gitlab::ErrorTracking)
     end
 
     def create_sast_commit

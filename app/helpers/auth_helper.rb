@@ -133,6 +133,8 @@ module AuthHelper
     disabled_providers = Gitlab::CurrentSettings.disabled_oauth_sign_in_sources || []
 
     providers = button_based_providers.map(&:to_s) - disabled_providers
+    # 注释掉 Google OAuth 登录方式
+    providers = providers.reject { |p| p == 'google_oauth2' }
     providers.sort_by do |provider|
       POPULAR_PROVIDERS.index(provider) || POPULAR_PROVIDERS.length
     end

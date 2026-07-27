@@ -12,8 +12,8 @@ module Sidebars
 
           add_item(list_menu_item)
           add_item(boards_menu_item)
-          add_item(service_desk_menu_item)
-          add_item(milestones_menu_item)
+          # add_item(service_desk_menu_item)
+          # add_item(milestones_menu_item)
 
           true
         end

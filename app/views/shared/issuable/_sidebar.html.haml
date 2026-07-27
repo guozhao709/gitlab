@@ -43,9 +43,9 @@
 
       .js-sidebar-labels{ data: sidebar_labels_data(issuable_sidebar, @project) }
 
-      - if issuable_sidebar[:supports_milestone]
-        .block.milestone{ :class => ("gl-border-b-0!" if in_group_context_with_iterations), data: { qa_selector: 'milestone_block', testid: 'sidebar-milestones' } }
-          .js-milestone-select{ data: { can_edit: can_edit_issuable.to_s, project_path: issuable_sidebar[:project_full_path], issue_iid: issuable_sidebar[:iid] } }
+-#       - if issuable_sidebar[:supports_milestone]
+-#         .block.milestone{ :class => ("gl-border-b-0!" if in_group_context_with_iterations), data: { qa_selector: 'milestone_block', testid: 'sidebar-milestones' } }
+-#           .js-milestone-select{ data: { can_edit: can_edit_issuable.to_s, project_path: issuable_sidebar[:project_full_path], issue_iid: issuable_sidebar[:iid] } }
 
       - if in_group_context_with_iterations
         .block{ class: 'gl-pt-0! gl-collapse-empty', data: { qa_selector: 'iteration_container', testid: 'iteration_container' } }<
