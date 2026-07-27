@@ -61,7 +61,8 @@ export default {
       );
     },
     shouldRenderMilestoneInfo() {
-      return Boolean(!isEmpty(this.release.milestones));
+      // 里程碑功能已注释
+      return false;
     },
   },
 

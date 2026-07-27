@@ -29,12 +29,12 @@
           - else
             #{s_('IssueList|created %{timeAgoString} by %{user}').html_safe % { timeAgoString: time_ago_with_tooltip(issue.created_at, placement: 'bottom'), user: link_to_member(@project, issue.author, avatar: false) }}
           = render_if_exists 'shared/issuable/gitlab_team_member_badge', author: issue.author
-        - if issue.milestone
-          %span.issuable-milestone.d-none.d-sm-inline-block
-            &nbsp;
-            = link_to project_issues_path(issue.project, milestone_title: issue.milestone.title), data: { html: 'true', toggle: 'tooltip', title: milestone_tooltip_due_date(issue.milestone) } do
-              = sprite_icon('clock', css_class: 'gl-vertical-align-text-bottom')
-              = issue.milestone.title
+-#         - if issue.milestone
+-#           %span.issuable-milestone.d-none.d-sm-inline-block
+-#             &nbsp;
+-#             = link_to project_issues_path(issue.project, milestone_title: issue.milestone.title), data: { html: 'true', toggle: 'tooltip', title: milestone_tooltip_due_date(issue.milestone) } do
+-#               = sprite_icon('clock', css_class: 'gl-vertical-align-text-bottom')
+-#               = issue.milestone.title
         - if issue.due_date
           %span.issuable-due-date.d-none.d-sm-inline-block.has-tooltip{ class: "#{'cred' if issue.overdue? && !issue.closed?}", title: _('Due date') }
             &nbsp;

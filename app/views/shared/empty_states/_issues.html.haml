@@ -48,16 +48,16 @@
 
             - if show_import_button
               .js-csv-import-export-buttons{ data: { show_import_button: 'true', issuable_type: issuable_type, import_csv_issues_path: import_csv_namespace_project_issues_path, can_edit: can_edit.to_s, project_import_jira_path: project_import_jira_path(@project), max_attachment_size: number_to_human_size(Gitlab::CurrentSettings.max_attachment_size.megabytes), container_class: 'gl-w-full gl-sm-w-auto gl-sm-mr-3 gl-display-inline-flex gl-vertical-align-middle', show_label: 'true' } }
-        %hr
-        %p.gl-text-center.gl-mb-0
-          %strong
-            = s_('JiraService|Using Jira for issue tracking?')
-        %p.gl-text-center.gl-mb-0
-          - jira_docs_link_url = help_page_url('integration/jira/issues', anchor: 'view-jira-issues')
-          - jira_docs_link_start = '<a href="%{url}" target="_blank" rel="noopener noreferrer">'.html_safe % { url: jira_docs_link_url }
-          = html_escape(s_('JiraService|%{jira_docs_link_start}Enable the Jira integration%{jira_docs_link_end} to view your Jira issues in GitRepo.')) % { jira_docs_link_start: jira_docs_link_start.html_safe, jira_docs_link_end: '</a>'.html_safe }
-        %p.gl-text-center.gl-mb-0.gl-text-gray-500
-          = s_('JiraService|This feature requires a Premium plan.')
+        -# %hr
+        -# %p.gl-text-center.gl-mb-0
+        -#   %strong
+        -#     = s_('JiraService|Using Jira for issue tracking?')
+        -# %p.gl-text-center.gl-mb-0
+        -#   - jira_docs_link_url = help_page_url('integration/jira/issues', anchor: 'view-jira-issues')
+        -#   - jira_docs_link_start = '<a href="%{url}" target="_blank" rel="noopener noreferrer">'.html_safe % { url: jira_docs_link_url }
+        -#   = html_escape(s_('JiraService|%{jira_docs_link_start}Enable the Jira integration%{jira_docs_link_end} to view your Jira issues in GitRepo.')) % { jira_docs_link_start: jira_docs_link_start.html_safe, jira_docs_link_end: '</a>'.html_safe }
+        -# %p.gl-text-center.gl-mb-0.gl-text-gray-500
+        -#   = s_('JiraService|This feature requires a Premium plan.')
 
       - else
         %h4.text-center= _("There are no issues to show")

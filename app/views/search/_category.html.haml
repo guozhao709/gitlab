@@ -19,8 +19,8 @@
         = search_filter_link 'commits', _("Commits")
       - if project_search_tabs?(:notes)
         = search_filter_link 'notes', _("Comments")
-      - if project_search_tabs?(:milestones)
-        = search_filter_link 'milestones', _("Milestones")
+-#       - if project_search_tabs?(:milestones)
+-#         = search_filter_link 'milestones', _("Milestones")
       = users
 
     - elsif @show_snippets
@@ -33,5 +33,5 @@
       = search_filter_link 'merge_requests', _("Merge requests") if feature_flag_tab_enabled?(:global_search_merge_requests_tab)
       = render_if_exists 'search/category_wiki' if feature_flag_tab_enabled?(:global_search_wiki_tab)
       = render_if_exists 'search/category_elasticsearch'
-      = search_filter_link 'milestones', _("Milestones")
+-#       = search_filter_link 'milestones', _("Milestones")
       = users

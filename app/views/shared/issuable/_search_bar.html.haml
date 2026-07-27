@@ -100,25 +100,25 @@
                       avatar: { lazy: true, url: '{{avatar_url}}' }
               = render_if_exists 'shared/issuable/approver_dropdown'
               = render_if_exists 'shared/issuable/approved_by_dropdown'
-              #js-dropdown-milestone.filtered-search-input-dropdown-menu.dropdown-menu
-                %ul{ data: { dropdown: true } }
-                  %li.filter-dropdown-item{ data: { value: 'None' } }
-                    %button.gl-button.btn.btn-link{ type: 'button' }
-                      = _('None')
-                  %li.filter-dropdown-item{ data: { value: 'Any' } }
-                    %button.gl-button.btn.btn-link{ type: 'button' }
-                      = _('Any')
-                  %li.filter-dropdown-item{ data: { value: 'Upcoming' } }
-                    %button.gl-button.btn.btn-link{ type: 'button' }
-                      = _('Upcoming')
-                  %li.filter-dropdown-item{ data: { value: 'Started' } }
-                    %button.gl-button.btn.btn-link{ type: 'button' }
-                      = _('Started')
-                  %li.divider.droplab-item-ignore
-                %ul.filter-dropdown{ data: { dynamic: true, dropdown: true } }
-                  %li.filter-dropdown-item
-                    %button.gl-button.btn.btn-link.js-data-value{ type: 'button' }
-                      {{title}}
+-#               #js-dropdown-milestone.filtered-search-input-dropdown-menu.dropdown-menu
+-#                 %ul{ data: { dropdown: true } }
+-#                   %li.filter-dropdown-item{ data: { value: 'None' } }
+-#                     %button.gl-button.btn.btn-link{ type: 'button' }
+-#                       = _('None')
+-#                   %li.filter-dropdown-item{ data: { value: 'Any' } }
+-#                     %button.gl-button.btn.btn-link{ type: 'button' }
+-#                       = _('Any')
+-#                   %li.filter-dropdown-item{ data: { value: 'Upcoming' } }
+-#                     %button.gl-button.btn.btn-link{ type: 'button' }
+-#                       = _('Upcoming')
+-#                   %li.filter-dropdown-item{ data: { value: 'Started' } }
+-#                     %button.gl-button.btn.btn-link{ type: 'button' }
+-#                       = _('Started')
+-#                   %li.divider.droplab-item-ignore
+-#                 %ul.filter-dropdown{ data: { dynamic: true, dropdown: true } }
+-#                   %li.filter-dropdown-item
+-#                     %button.gl-button.btn.btn-link.js-data-value{ type: 'button' }
+-#                       {{title}}
               = render_if_exists 'shared/issuable/filter_iteration', type: type
               #js-dropdown-release.filtered-search-input-dropdown-menu.dropdown-menu
                 %ul{ data: { dropdown: true } }

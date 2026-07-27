@@ -33,8 +33,8 @@
 
       = render_if_exists "shared/issuable/form/epic", issuable: issuable, form: form, project: project
 
-      - if issuable.supports_milestone?
-        .form-group.row.issue-milestone
+-#       - if issuable.supports_milestone?
+-#         .form-group.row.issue-milestone
           = form.label :milestone_id, _('Milestone'), class: "col-form-label #{has_due_date ? "col-md-2 col-lg-4" : "col-sm-2"}"
           .col-sm-10{ class: ("col-md-8" if has_due_date) }
             .issuable-form-select-holder
