@@ -52,10 +52,21 @@ class Projects::BlobController < Projects::ApplicationController
   end
 
   def create
-    create_commit(Files::CreateService, success_notice: _("The file has been successfully created."),
-                                        success_path: -> { project_blob_path(@project, File.join(@branch_name, @file_path)) },
-                                        failure_view: :new,
-                                        failure_path: project_new_blob_path(@project, @ref))
+    if params[:file].present?
+      # Single file upload (original behavior)
+      create_commit(Files::CreateService, success_notice: _("The file has been successfully created."),
+                                          success_path: -> { project_blob_path(@project, File.join(@branch_name, @file_path)) },
+                                          failure_view: :new,
+                                          failure_path: project_new_blob_path(@project, @ref))
+    elsif params[:files].present?
+      # Multiple file upload
+      create_commit(Files::MultiService, success_notice: _("The files have been successfully created."),
+                                         success_path: -> { project_tree_path(@project, File.join(@branch_name, @path)) },
+                                         failure_path: project_tree_path(@project, @ref))
+    else
+      flash[:alert] = _("No files were selected for upload.")
+      redirect_to project_new_blob_path(@project, @ref)
+    end
   end
 
   def show
@@ -191,31 +202,59 @@ class Projects::BlobController < Projects::ApplicationController
   def editor_variables
     @branch_name = params[:branch_name]
 
-    @file_path =
-      if action_name.to_s == 'create'
-        if params[:file].present?
-          params[:file_name] = params[:file].original_filename
-        end
+    if params[:files].present?
+      # Multiple file upload (files come as indexed hash: { "0" => file, "1" => file })
+      files_hash = params[:files].to_unsafe_h
+      paths_hash = params[:paths].present? ? params[:paths].to_unsafe_h : {}
 
-        File.join(@path, params[:file_name])
-      elsif params[:file_path].present?
-        params[:file_path]
-      else
-        @path
+      actions = files_hash.map do |key, file|
+        relative_path = paths_hash[key].presence || file.original_filename
+
+        {
+          action: 'create',
+          file_path: File.join(@path, relative_path),
+          content: file.read
+        }
       end
 
-    if params[:file].present?
-      params[:content] = params[:file]
-    end
+      @commit_params = {
+        commit_message: params[:commit_message],
+        actions: actions
+      }
+    elsif params[:file].present?
+      # Single file upload (original behavior)
+      params[:file_name] = params[:file].original_filename
 
-    @commit_params = {
-      file_path: @file_path,
-      commit_message: params[:commit_message],
-      previous_path: @path,
-      file_content: params[:content],
-      file_content_encoding: params[:encoding],
-      last_commit_sha: params[:last_commit_sha]
-    }
+      @file_path = File.join(@path, params[:file_name])
+
+      params[:content] = params[:file]
+
+      @commit_params = {
+        file_path: @file_path,
+        commit_message: params[:commit_message],
+        previous_path: @path,
+        file_content: params[:content],
+        file_content_encoding: params[:encoding],
+        last_commit_sha: params[:last_commit_sha]
+      }
+    else
+      # New file from editor (no file upload)
+      @file_path =
+        if params[:file_path].present?
+          params[:file_path]
+        else
+          @path
+        end
+
+      @commit_params = {
+        file_path: @file_path,
+        commit_message: params[:commit_message],
+        previous_path: @path,
+        file_content: params[:content],
+        file_content_encoding: params[:encoding],
+        last_commit_sha: params[:last_commit_sha]
+      }
+    end
   end
 
   def validate_diff_params

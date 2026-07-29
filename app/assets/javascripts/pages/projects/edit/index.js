@@ -17,7 +17,9 @@ initFilePickers();
 initConfirmDanger();
 initSettingsPanels();
 initProjectDeleteButton();
-mountBadgeSettings(PROJECT_BADGE);
+if (document.querySelector('.js-badge-settings')) {
+  mountBadgeSettings(PROJECT_BADGE);
+}
 
 new UserCallout({ className: 'js-service-desk-callout' }); // eslint-disable-line no-new
 initServiceDesk();
