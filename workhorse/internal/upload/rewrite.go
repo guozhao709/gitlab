@@ -26,7 +26,7 @@ import (
 	"gitlab.com/gitlab-org/gitlab/workhorse/internal/upload/exif"
 )
 
-const maxFilesAllowed = 10
+const maxFilesAllowed = 1000
 
 // ErrInjectedClientParam means that the client sent a parameter that overrides one of our own fields
 var (

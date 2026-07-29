@@ -2,7 +2,7 @@
 import { GlIcon, GlLink, GlSprintf } from '@gitlab/ui';
 import { __ } from '~/locale';
 import { VALID_DATA_TRANSFER_TYPE, VALID_IMAGE_FILE_MIMETYPE } from './constants';
-import { isValidImage } from './utils';
+import { isValidImage, getFilesFromDataTransfer } from './utils';
 
 export default {
   components: {
@@ -51,6 +51,11 @@ export default {
       required: false,
       default: false,
     },
+    directory: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
   },
   data() {
     return {
@@ -81,13 +86,36 @@ export default {
         dataTransfer && dataTransfer.types.some((t) => t === VALID_DATA_TRANSFER_TYPE),
       );
     },
-    ondrop({ dataTransfer = {} }) {
+    async ondrop({ dataTransfer = {} }) {
       this.dragCounter = 0;
-      // User already had feedback when dropzone was active, so bail here
       if (!this.isDragDataValid) {
         return;
       }
 
+      if (this.directory && dataTransfer.items) {
+        // Directory mode: recursively traverse directory tree via webkitGetAsEntry
+        try {
+          const fileEntries = await getFilesFromDataTransfer(dataTransfer);
+
+          if (fileEntries.length === 0) {
+            this.$emit('error');
+            return;
+          }
+
+          const files = fileEntries.map((e) => e.file);
+          if (!this.isValidUpload(files)) {
+            this.$emit('error');
+            return;
+          }
+
+          this.$emit('change', fileEntries);
+        } catch {
+          this.$emit('error');
+        }
+        return;
+      }
+
+      // Flat file drop (existing behavior)
       const { files } = dataTransfer;
       if (!this.isValidUpload(Array.from(files))) {
         this.$emit('error');
@@ -131,7 +159,18 @@ export default {
       this.$refs.fileUpload.click();
     },
     onFileInputChange(e) {
-      this.$emit('change', this.singleFileSelection ? e.target.files[0] : e.target.files);
+      const { files } = e.target;
+
+      if (this.directory) {
+        // webkitdirectory: each file has webkitRelativePath
+        const fileEntries = Array.from(files).map((file) => ({
+          file,
+          relativePath: file.webkitRelativePath || file.name,
+        }));
+        this.$emit('change', fileEntries);
+      } else {
+        this.$emit('change', this.singleFileSelection ? files[0] : files);
+      }
     },
   },
 };
@@ -186,6 +225,8 @@ export default {
         :accept="validFileMimetypes"
         class="hide"
         :multiple="!singleFileSelection"
+        :webkitdirectory="directory"
+        :directory="directory"
         @change="onFileInputChange"
       />
     </slot>

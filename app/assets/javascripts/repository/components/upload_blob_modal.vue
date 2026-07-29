@@ -8,10 +8,10 @@ import {
   GlToggle,
   GlButton,
   GlAlert,
+  GlIcon,
 } from '@gitlab/ui';
 import createFlash from '~/flash';
 import axios from '~/lib/utils/axios_utils';
-import { ContentTypeMultipartFormData } from '~/lib/utils/headers';
 import { numberToHumanSize } from '~/lib/utils/number_utils';
 import { visitUrl, joinPaths } from '~/lib/utils/url_utility';
 import { __ } from '~/locale';
@@ -30,6 +30,7 @@ const NEW_BRANCH_IN_FORK = __(
   'GitRepo will create a branch in your fork and start a merge request.',
 );
 const ERROR_MESSAGE = __('Error uploading file. Please try again.');
+const TOO_MANY_FILES_MESSAGE = __('文件数量大于1000，请重试');
 
 export default {
   components: {
@@ -42,6 +43,7 @@ export default {
     GlButton,
     UploadDropzone,
     GlAlert,
+    GlIcon,
   },
   i18n: {
     COMMIT_LABEL,
@@ -96,9 +98,7 @@ export default {
       commit: this.commitMessage,
       target: this.targetBranch,
       createNewMr: true,
-      file: null,
-      filePreviewURL: null,
-      fileBinary: null,
+      files: [],
       loading: false,
     };
   },
@@ -125,34 +125,55 @@ export default {
         ],
       };
     },
-    formattedFileSize() {
-      return numberToHumanSize(this.file.size);
+    totalFileSize() {
+      return numberToHumanSize(this.files.reduce((sum, f) => sum + f.file.size, 0));
     },
     showCreateNewMrToggle() {
       return this.canPushCode && this.target !== this.originalBranch;
     },
     formCompleted() {
-      return this.file && this.commit && this.target;
+      return this.files.length > 0 && this.commit && this.target;
     },
   },
   methods: {
     show() {
       this.$refs[this.modalId].show();
     },
-    setFile(file) {
-      this.file = file;
-
-      const fileUurlReader = new FileReader();
-
-      fileUurlReader.readAsDataURL(this.file);
-
-      fileUurlReader.onload = (e) => {
-        this.filePreviewURL = e.target?.result;
-      };
+    fileSize(size) {
+      return numberToHumanSize(size);
     },
-    removeFile() {
-      this.file = null;
-      this.filePreviewURL = null;
+    setFiles(filesOrEntries) {
+      // Normalize: could be FileList, File[], or Array<{file, relativePath}>
+      const first = Array.isArray(filesOrEntries)
+        ? filesOrEntries[0]
+        : filesOrEntries[0];
+
+      if (first && first.file instanceof File) {
+        // Directory mode: Array<{file, relativePath}>
+        filesOrEntries.forEach(({ file, relativePath }) => {
+          // Strip the top-level folder name so only inner content is uploaded
+          const path = relativePath.split('/').slice(1).join('/') || file.name;
+          if (!this.files.some((f) => f.path === path)) {
+            this.files.push({ file, path });
+          }
+        });
+      } else {
+        // Flat files: FileList or File[]
+        const fileArray = Array.isArray(filesOrEntries)
+          ? filesOrEntries
+          : Array.from(filesOrEntries);
+        fileArray.forEach((file) => {
+          const rawPath = file.webkitRelativePath || file.name;
+          // Strip the top-level folder name so only inner content is uploaded
+          const path = rawPath.split('/').slice(1).join('/') || file.name;
+          if (!this.files.some((f) => f.path === path)) {
+            this.files.push({ file, path });
+          }
+        });
+      }
+    },
+    removeFile(index) {
+      this.files.splice(index, 1);
     },
     submitForm() {
       return this.replacePath ? this.replaceFile() : this.uploadFile();
@@ -162,16 +183,17 @@ export default {
         method,
         url,
         data: this.formData(),
-        headers: {
-          ...ContentTypeMultipartFormData,
-        },
       })
         .then((response) => {
           visitUrl(response.data.filePath);
         })
-        .catch(() => {
+        .catch((error) => {
           this.loading = false;
-          createFlash({ message: ERROR_MESSAGE });
+          const responseData = error?.response?.data;
+          const isTooManyFiles =
+            typeof responseData === 'string' &&
+            responseData.includes('upload request contains more than');
+          createFlash({ message: isTooManyFiles ? TOO_MANY_FILES_MESSAGE : ERROR_MESSAGE });
         });
     },
     formData() {
@@ -179,7 +201,16 @@ export default {
       formData.append('branch_name', this.target);
       formData.append('create_merge_request', this.createNewMr);
       formData.append('commit_message', this.commit);
-      formData.append('file', this.file);
+      if (this.files.length === 1) {
+        // Single file: use 'file' param (original behavior, works with Workhorse)
+        formData.append('file', this.files[0].file);
+      } else {
+        // Multiple files: send indexed files[N] and paths[N]
+        this.files.forEach(({ file, path }, index) => {
+          formData.append(`files[${index}]`, file);
+          formData.append(`paths[${index}]`, path);
+        });
+      }
 
       return formData;
     },
@@ -218,25 +249,36 @@ export default {
     >
       <upload-dropzone
         class="gl-h-200! gl-mb-4"
-        single-file-selection
         :valid-file-mimetypes="$options.validFileMimetypes"
         :is-file-valid="() => true"
-        @change="setFile"
+        @change="setFiles"
+        directory
       >
         <div
-          v-if="file"
-          class="card upload-dropzone-card upload-dropzone-border gl-w-full gl-h-full gl-align-items-center gl-justify-content-center gl-p-3"
+          v-if="files.length"
+          class="card upload-dropzone-card upload-dropzone-border gl-w-full gl-h-full gl-align-items-center gl-p-3"
+          style="overflow-y: auto;"
         >
-          <img v-if="filePreviewURL" :src="filePreviewURL" class="gl-h-11" />
-          <div>{{ formattedFileSize }}</div>
-          <div>{{ file.name }}</div>
-          <gl-button
-            category="tertiary"
-            variant="confirm"
-            :disabled="loading"
-            @click="removeFile"
-            >{{ $options.i18n.REMOVE_FILE_TEXT }}</gl-button
+          <div
+            v-for="({ file, path }, index) in files"
+            :key="path"
+            class="gl-display-flex gl-align-items-center gl-py-2 gl-w-full"
+            :class="{ 'gl-border-b-1': index < files.length - 1 }"
           >
+            <gl-icon name="doc-text" :size="16" class="gl-mr-3 gl-text-secondary gl-flex-shrink-0" />
+            <div class="gl-flex-grow-1 gl-min-w-0">
+              <div class="gl-font-weight-bold gl-text-truncate">{{ path }}</div>
+              <div class="gl-text-secondary gl-font-sm">{{ fileSize(file.size) }}</div>
+            </div>
+            <gl-button
+              category="tertiary"
+              variant="danger"
+              :disabled="loading"
+              icon="remove"
+              :aria-label="$options.i18n.REMOVE_FILE_TEXT"
+              @click="removeFile(index)"
+            />
+          </div>
         </div>
       </upload-dropzone>
       <gl-form-group :label="$options.i18n.COMMIT_LABEL" label-for="commit_message">
